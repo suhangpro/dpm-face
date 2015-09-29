@@ -1,0 +1,65 @@
+\hypertarget{structeHfacemodel}{\section{e\-Hfacemodel Struct Reference}
+\label{structeHfacemodel}\index{e\-Hfacemodel@{e\-Hfacemodel}}
+}
+
+
+Face detection model.  
+
+
+
+
+{\ttfamily \#include $<$e\-Hfacemodel.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}{filter\-\_\-t} $>$ \hyperlink{structeHfacemodel_a123d519573ca06cd4eba441997206e38}{filters}
+\begin{DoxyCompactList}\small\item\em part filters \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_ac59c3e3b7902c775b125cc8ca0f21d62}{vector$<$ facedef\-\_\-t $>$ \hyperlink{structeHfacemodel_ac59c3e3b7902c775b125cc8ca0f21d62}{defs}}\label{structeHfacemodel_ac59c3e3b7902c775b125cc8ca0f21d62}
+
+\begin{DoxyCompactList}\small\item\em deformation params \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_a0ab9deba4961009ee3a099d33606c07e}{vector$<$ vector$<$ facepart\-\_\-t $>$ $>$ \hyperlink{structeHfacemodel_a0ab9deba4961009ee3a099d33606c07e}{components}}\label{structeHfacemodel_a0ab9deba4961009ee3a099d33606c07e}
+
+\begin{DoxyCompactList}\small\item\em part infos \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_ab54ffe458e67505973138e5a80ef2fff}{int \hyperlink{structeHfacemodel_ab54ffe458e67505973138e5a80ef2fff}{maxsize} \mbox{[}2\mbox{]}}\label{structeHfacemodel_ab54ffe458e67505973138e5a80ef2fff}
+
+\begin{DoxyCompactList}\small\item\em X\-X\-X. \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_ad0ce04ae00f98e810e4ae316ca7deba9}{int \hyperlink{structeHfacemodel_ad0ce04ae00f98e810e4ae316ca7deba9}{len}}\label{structeHfacemodel_ad0ce04ae00f98e810e4ae316ca7deba9}
+
+\begin{DoxyCompactList}\small\item\em not used \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_af82067f1f728e180226cdd859af20571}{int \hyperlink{structeHfacemodel_af82067f1f728e180226cdd859af20571}{interval}}\label{structeHfacemodel_af82067f1f728e180226cdd859af20571}
+
+\begin{DoxyCompactList}\small\item\em interval of pyramid \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_a0bde7338959bdc65ff3512d782657ca9}{int \hyperlink{structeHfacemodel_a0bde7338959bdc65ff3512d782657ca9}{sbin}}\label{structeHfacemodel_a0bde7338959bdc65ff3512d782657ca9}
+
+\begin{DoxyCompactList}\small\item\em bin for building hog feature \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_ae1baa2bf5e2058e56966d152c814b922}{double \hyperlink{structeHfacemodel_ae1baa2bf5e2058e56966d152c814b922}{delta}}\label{structeHfacemodel_ae1baa2bf5e2058e56966d152c814b922}
+
+\begin{DoxyCompactList}\small\item\em not used \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_acf18991215814c8946f57888288458a9}{double \hyperlink{structeHfacemodel_acf18991215814c8946f57888288458a9}{thresh}}\label{structeHfacemodel_acf18991215814c8946f57888288458a9}
+
+\begin{DoxyCompactList}\small\item\em threshold for detection score \end{DoxyCompactList}\item 
+\hypertarget{structeHfacemodel_a07a6305e71eac6971ff9398f2a00ba02}{double \hyperlink{structeHfacemodel_a07a6305e71eac6971ff9398f2a00ba02}{obj}}\label{structeHfacemodel_a07a6305e71eac6971ff9398f2a00ba02}
+
+\begin{DoxyCompactList}\small\item\em not used \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Face detection model. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structeHfacemodel_a123d519573ca06cd4eba441997206e38}{\index{e\-Hfacemodel@{e\-Hfacemodel}!filters@{filters}}
+\index{filters@{filters}!eHfacemodel@{e\-Hfacemodel}}
+\subsubsection[{filters}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf filter\-\_\-t}$>$ e\-Hfacemodel\-::filters}}\label{structeHfacemodel_a123d519573ca06cd4eba441997206e38}
+
+
+part filters 
+
+\begin{DoxyNote}{Note}
+All part filters should be of the same size 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHfacemodel_8h}{e\-Hfacemodel.\-h}\end{DoxyCompactItemize}

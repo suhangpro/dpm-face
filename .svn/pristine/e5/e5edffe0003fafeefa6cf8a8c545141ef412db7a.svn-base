@@ -1,0 +1,29 @@
+\hypertarget{structeHfilter}{\section{e\-Hfilter Struct Reference}
+\label{structeHfilter}\index{e\-Hfilter@{e\-Hfilter}}
+}
+
+
+Image feature filter.  
+
+
+
+
+{\ttfamily \#include $<$e\-Hfilter.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHfilter_a719271f5188e345d1b25555f90986716}{int \hyperlink{structeHfilter_a719271f5188e345d1b25555f90986716}{i}}\label{structeHfilter_a719271f5188e345d1b25555f90986716}
+
+\begin{DoxyCompactList}\small\item\em filter index, not used \end{DoxyCompactList}\item 
+\hypertarget{structeHfilter_a0c1a726fbd8ed16c1f1deac2de25eac6}{\hyperlink{eHmatrix_8h_ab963a0b30b57a23311c19a379665ac97}{mat3d\-\_\-t} \hyperlink{structeHfilter_a0c1a726fbd8ed16c1f1deac2de25eac6}{w}}\label{structeHfilter_a0c1a726fbd8ed16c1f1deac2de25eac6}
+
+\begin{DoxyCompactList}\small\item\em filter \mbox{[}y,x,f\mbox{]}, where (y,x) is location, f is feature index \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Image feature filter. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHfilter_8h}{e\-Hfilter.\-h}\end{DoxyCompactItemize}

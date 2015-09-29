@@ -1,0 +1,41 @@
+\hypertarget{structeHfeatpyramid}{\section{e\-Hfeatpyramid Struct Reference}
+\label{structeHfeatpyramid}\index{e\-Hfeatpyramid@{e\-Hfeatpyramid}}
+}
+
+
+Image feature pyramid.  
+
+
+
+
+{\ttfamily \#include $<$e\-Hfeatpyramid.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHfeatpyramid_ad989df221610a00d060531ed4371a83c}{\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} $\ast$ \hyperlink{structeHfeatpyramid_ad989df221610a00d060531ed4371a83c}{feat}}\label{structeHfeatpyramid_ad989df221610a00d060531ed4371a83c}
+
+\begin{DoxyCompactList}\small\item\em features of each level \end{DoxyCompactList}\item 
+\hypertarget{structeHfeatpyramid_a6aae2002e28a0c9d77afe51ad7d4cb97}{double $\ast$ \hyperlink{structeHfeatpyramid_a6aae2002e28a0c9d77afe51ad7d4cb97}{scale}}\label{structeHfeatpyramid_a6aae2002e28a0c9d77afe51ad7d4cb97}
+
+\begin{DoxyCompactList}\small\item\em scaled of each level \end{DoxyCompactList}\item 
+\hypertarget{structeHfeatpyramid_a7e5298a7d41a2ee7567b28eb0a402ca2}{int \hyperlink{structeHfeatpyramid_a7e5298a7d41a2ee7567b28eb0a402ca2}{len}}\label{structeHfeatpyramid_a7e5298a7d41a2ee7567b28eb0a402ca2}
+
+\begin{DoxyCompactList}\small\item\em levels of pyra, size of feat \& scale \end{DoxyCompactList}\item 
+\hypertarget{structeHfeatpyramid_ad7fff47e725b98d4f3f86b28069056f7}{int \hyperlink{structeHfeatpyramid_ad7fff47e725b98d4f3f86b28069056f7}{interval}}\label{structeHfeatpyramid_ad7fff47e725b98d4f3f86b28069056f7}
+
+\begin{DoxyCompactList}\small\item\em levels within a double-\/size interval \end{DoxyCompactList}\item 
+\hypertarget{structeHfeatpyramid_af7f6662affda72ae365a893b4470c42c}{int \hyperlink{structeHfeatpyramid_af7f6662affda72ae365a893b4470c42c}{imy}}\label{structeHfeatpyramid_af7f6662affda72ae365a893b4470c42c}
+
+\begin{DoxyCompactList}\small\item\em image height \end{DoxyCompactList}\item 
+\hypertarget{structeHfeatpyramid_abbdd67ef8d05ec9276b8b129c6e0c6a9}{int \hyperlink{structeHfeatpyramid_abbdd67ef8d05ec9276b8b129c6e0c6a9}{imx}}\label{structeHfeatpyramid_abbdd67ef8d05ec9276b8b129c6e0c6a9}
+
+\begin{DoxyCompactList}\small\item\em image width \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Image feature pyramid. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHfeatpyramid_8h}{e\-Hfeatpyramid.\-h}\end{DoxyCompactItemize}

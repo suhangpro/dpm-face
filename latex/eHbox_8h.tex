@@ -1,0 +1,156 @@
+\hypertarget{eHbox_8h}{\section{e\-Hbox.\-h File Reference}
+\label{eHbox_8h}\index{e\-Hbox.\-h@{e\-Hbox.\-h}}
+}
+
+
+Box types and operations.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHbox__f}{e\-Hbox\-\_\-f}
+\begin{DoxyCompactList}\small\item\em box with floating-\/point boundaries \end{DoxyCompactList}\item 
+struct \hyperlink{structeHbox__i}{e\-Hbox\-\_\-i}
+\begin{DoxyCompactList}\small\item\em box with integer boundaries \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{typedef struct \hyperlink{structeHbox__f}{e\-Hbox\-\_\-f} \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t}}\label{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}
+
+\begin{DoxyCompactList}\small\item\em box with floating-\/point boundaries \end{DoxyCompactList}\item 
+\hypertarget{eHbox_8h_ad87de43a9997bf3f271f38c61959162c}{typedef struct \hyperlink{structeHbox__i}{e\-Hbox\-\_\-i} \hyperlink{eHbox_8h_ad87de43a9997bf3f271f38c61959162c}{ibox\-\_\-t}}\label{eHbox_8h_ad87de43a9997bf3f271f38c61959162c}
+
+\begin{DoxyCompactList}\small\item\em box with integer boundaries \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHbox_8h_a785130b2eef70b64eb4a219faf69406c}{void \hyperlink{eHbox_8h_a785130b2eef70b64eb4a219faf69406c}{fbox\-\_\-set} (\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $\ast$box, double x1, double y1, double x2, double y2)}\label{eHbox_8h_a785130b2eef70b64eb4a219faf69406c}
+
+\begin{DoxyCompactList}\small\item\em Set values for given box. \end{DoxyCompactList}\item 
+\hypertarget{eHbox_8h_a77dd90aa59ac434793880069b10b2683}{\hyperlink{eHbox_8h_ad87de43a9997bf3f271f38c61959162c}{ibox\-\_\-t} \hyperlink{eHbox_8h_a77dd90aa59ac434793880069b10b2683}{fbox\-\_\-getibox} (\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $\ast$box)}\label{eHbox_8h_a77dd90aa59ac434793880069b10b2683}
+
+\begin{DoxyCompactList}\small\item\em Round floating-\/point box to intege box. \end{DoxyCompactList}\item 
+\hypertarget{eHbox_8h_ad27da146619774ecd4ad30b692c4457a}{void \hyperlink{eHbox_8h_ad27da146619774ecd4ad30b692c4457a}{ibox\-\_\-set} (\hyperlink{eHbox_8h_ad87de43a9997bf3f271f38c61959162c}{ibox\-\_\-t} $\ast$, int x1, int y1, int x2, int y2)}\label{eHbox_8h_ad27da146619774ecd4ad30b692c4457a}
+
+\begin{DoxyCompactList}\small\item\em Set values for given box. \end{DoxyCompactList}\item 
+\hypertarget{eHbox_8h_ac90c97aed9c2d0c799f4d9bea391add6}{double \hyperlink{eHbox_8h_ac90c97aed9c2d0c799f4d9bea391add6}{fbox\-\_\-inter\-Area} (const \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \&box1, const \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \&box2)}\label{eHbox_8h_ac90c97aed9c2d0c799f4d9bea391add6}
+
+\begin{DoxyCompactList}\small\item\em Compute area of intersection between two boxes. \end{DoxyCompactList}\item 
+\hypertarget{eHbox_8h_a33ec0cbec476f897c0f2849e8521051c}{void \hyperlink{eHbox_8h_a33ec0cbec476f897c0f2849e8521051c}{fbox\-\_\-clip} (\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \&box, const int $\ast$imsize)}\label{eHbox_8h_a33ec0cbec476f897c0f2849e8521051c}
+
+\begin{DoxyCompactList}\small\item\em Clip box so it's limited by the image size. \end{DoxyCompactList}\item 
+\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \hyperlink{eHbox_8h_ac02a4d757825a007ffdd38e125e56b0a}{fbox\-\_\-merge} (const vector$<$ \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $>$ \&boxes, const int $\ast$idxs, int num, const double $\ast$padding=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Merge boxes, resulting box can be optionally padded. \end{DoxyCompactList}\item 
+\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \hyperlink{eHbox_8h_a8e1bfd605caf57ab8c592e54524730eb}{fbox\-\_\-get\-Resized} (const \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \&box, double scale)
+\begin{DoxyCompactList}\small\item\em Get a resized box, input box is not changed. \end{DoxyCompactList}\item 
+\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \hyperlink{eHbox_8h_ac48e72e2e5d2c11c56e54af523d4d2ce}{fbox\-\_\-get\-Moved} (const \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \&box, const int $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Get a moved box, input box is not changed. \end{DoxyCompactList}\item 
+void \hyperlink{eHbox_8h_a82abeb82bb9e51fc50bdd70dffe3b7e7}{fbox\-\_\-resize} (\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $\ast$box, double scale)
+\begin{DoxyCompactList}\small\item\em Resize the input box. \end{DoxyCompactList}\item 
+void \hyperlink{eHbox_8h_a94dc7dceaa7ee714b1bd99b30f64a8c5}{fbox\-\_\-move} (\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $\ast$box, const int $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Move the position of input box by given offset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Box types and operations. Boxes are defined as tuples (x1, y1, x2, y2), where x1$<$=x2, y1$<$=y2; so (x1,y1) is the top-\/left corner, (x2,y2) is the bottom-\/right corner.
+
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/13 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHbox_8h_ac48e72e2e5d2c11c56e54af523d4d2ce}{\index{e\-Hbox.\-h@{e\-Hbox.\-h}!fbox\-\_\-get\-Moved@{fbox\-\_\-get\-Moved}}
+\index{fbox\-\_\-get\-Moved@{fbox\-\_\-get\-Moved}!eHbox.h@{e\-Hbox.\-h}}
+\subsubsection[{fbox\-\_\-get\-Moved}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fbox\-\_\-t} fbox\-\_\-get\-Moved (
+\begin{DoxyParamCaption}
+\item[{const {\bf fbox\-\_\-t} \&}]{box, }
+\item[{const int $\ast$}]{offset}
+\end{DoxyParamCaption}
+)}}\label{eHbox_8h_ac48e72e2e5d2c11c56e54af523d4d2ce}
+
+
+Get a moved box, input box is not changed. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a94dc7dceaa7ee714b1bd99b30f64a8c5}{fbox\-\_\-move()} 
+\end{DoxySeeAlso}
+\hypertarget{eHbox_8h_a8e1bfd605caf57ab8c592e54524730eb}{\index{e\-Hbox.\-h@{e\-Hbox.\-h}!fbox\-\_\-get\-Resized@{fbox\-\_\-get\-Resized}}
+\index{fbox\-\_\-get\-Resized@{fbox\-\_\-get\-Resized}!eHbox.h@{e\-Hbox.\-h}}
+\subsubsection[{fbox\-\_\-get\-Resized}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fbox\-\_\-t} fbox\-\_\-get\-Resized (
+\begin{DoxyParamCaption}
+\item[{const {\bf fbox\-\_\-t} \&}]{box, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}}\label{eHbox_8h_a8e1bfd605caf57ab8c592e54524730eb}
+
+
+Get a resized box, input box is not changed. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a82abeb82bb9e51fc50bdd70dffe3b7e7}{fbox\-\_\-resize()} 
+\end{DoxySeeAlso}
+\hypertarget{eHbox_8h_ac02a4d757825a007ffdd38e125e56b0a}{\index{e\-Hbox.\-h@{e\-Hbox.\-h}!fbox\-\_\-merge@{fbox\-\_\-merge}}
+\index{fbox\-\_\-merge@{fbox\-\_\-merge}!eHbox.h@{e\-Hbox.\-h}}
+\subsubsection[{fbox\-\_\-merge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fbox\-\_\-t} fbox\-\_\-merge (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf fbox\-\_\-t} $>$ \&}]{boxes, }
+\item[{const int $\ast$}]{idxs, }
+\item[{int}]{num, }
+\item[{const double $\ast$}]{padding = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{eHbox_8h_ac02a4d757825a007ffdd38e125e56b0a}
+
+
+Merge boxes, resulting box can be optionally padded. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boxes} & array of boxes to be merged \\
+\hline
+{\em idxs} & indexs within vector, indicating which boxes to merge \\
+\hline
+{\em num} & length of idxs \\
+\hline
+{\em padding} & \mbox{[}l r u d\mbox{]} as ratio of corresponding edge, if N\-U\-L\-L is passed in, no padding is performed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+merged box 
+\end{DoxyReturn}
+\hypertarget{eHbox_8h_a94dc7dceaa7ee714b1bd99b30f64a8c5}{\index{e\-Hbox.\-h@{e\-Hbox.\-h}!fbox\-\_\-move@{fbox\-\_\-move}}
+\index{fbox\-\_\-move@{fbox\-\_\-move}!eHbox.h@{e\-Hbox.\-h}}
+\subsubsection[{fbox\-\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}void fbox\-\_\-move (
+\begin{DoxyParamCaption}
+\item[{{\bf fbox\-\_\-t} $\ast$}]{box, }
+\item[{const int $\ast$}]{offset}
+\end{DoxyParamCaption}
+)}}\label{eHbox_8h_a94dc7dceaa7ee714b1bd99b30f64a8c5}
+
+
+Move the position of input box by given offset. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_ac48e72e2e5d2c11c56e54af523d4d2ce}{fbox\-\_\-get\-Moved()} 
+\end{DoxySeeAlso}
+\hypertarget{eHbox_8h_a82abeb82bb9e51fc50bdd70dffe3b7e7}{\index{e\-Hbox.\-h@{e\-Hbox.\-h}!fbox\-\_\-resize@{fbox\-\_\-resize}}
+\index{fbox\-\_\-resize@{fbox\-\_\-resize}!eHbox.h@{e\-Hbox.\-h}}
+\subsubsection[{fbox\-\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}void fbox\-\_\-resize (
+\begin{DoxyParamCaption}
+\item[{{\bf fbox\-\_\-t} $\ast$}]{box, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}}\label{eHbox_8h_a82abeb82bb9e51fc50bdd70dffe3b7e7}
+
+
+Resize the input box. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a8e1bfd605caf57ab8c592e54524730eb}{fbox\-\_\-get\-Resized()} 
+\end{DoxySeeAlso}

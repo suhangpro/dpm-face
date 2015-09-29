@@ -1,0 +1,201 @@
+\hypertarget{eHmatrix_8h}{\section{e\-Hmatrix.\-h File Reference}
+\label{eHmatrix_8h}\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}}
+}
+
+
+Basic matrix types and operations.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHmatrix2d}{e\-Hmatrix2d}
+\begin{DoxyCompactList}\small\item\em 2\-D matrix \end{DoxyCompactList}\item 
+struct \hyperlink{structeHmatrix3d}{e\-Hmatrix3d}
+\begin{DoxyCompactList}\small\item\em 3\-D matrix \end{DoxyCompactList}\item 
+struct \hyperlink{structeHmatrixkd}{e\-Hmatrixkd}
+\begin{DoxyCompactList}\small\item\em k-\/dimension matrix \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHmatrix_8h_aaa0144c14d8561515f70b8612e814b20}{typedef struct \hyperlink{structeHmatrix2d}{e\-Hmatrix2d} \hyperlink{eHmatrix_8h_aaa0144c14d8561515f70b8612e814b20}{mat2d\-\_\-t}}\label{eHmatrix_8h_aaa0144c14d8561515f70b8612e814b20}
+
+\begin{DoxyCompactList}\small\item\em 2\-D matrix \end{DoxyCompactList}\item 
+\hypertarget{eHmatrix_8h_ae38c93d3f87f14c008951f0af83e54be}{typedef \hyperlink{eHmatrix_8h_aaa0144c14d8561515f70b8612e814b20}{mat2d\-\_\-t} $\ast$ \hyperlink{eHmatrix_8h_ae38c93d3f87f14c008951f0af83e54be}{mat2d\-\_\-ptr}}\label{eHmatrix_8h_ae38c93d3f87f14c008951f0af83e54be}
+
+\begin{DoxyCompactList}\small\item\em pointer to a 2\-D matrix \end{DoxyCompactList}\item 
+\hypertarget{eHmatrix_8h_ab963a0b30b57a23311c19a379665ac97}{typedef struct \hyperlink{structeHmatrix3d}{e\-Hmatrix3d} \hyperlink{eHmatrix_8h_ab963a0b30b57a23311c19a379665ac97}{mat3d\-\_\-t}}\label{eHmatrix_8h_ab963a0b30b57a23311c19a379665ac97}
+
+\begin{DoxyCompactList}\small\item\em 3\-D matrix \end{DoxyCompactList}\item 
+\hypertarget{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{typedef \hyperlink{eHmatrix_8h_ab963a0b30b57a23311c19a379665ac97}{mat3d\-\_\-t} $\ast$ \hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr}}\label{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}
+
+\begin{DoxyCompactList}\small\item\em pointer to a 3\-D matrix \end{DoxyCompactList}\item 
+\hypertarget{eHmatrix_8h_ae49c64854a3fd231e61b288cb0b3ac59}{typedef struct \hyperlink{structeHmatrixkd}{e\-Hmatrixkd} \hyperlink{eHmatrix_8h_ae49c64854a3fd231e61b288cb0b3ac59}{matkd\-\_\-t}}\label{eHmatrix_8h_ae49c64854a3fd231e61b288cb0b3ac59}
+
+\begin{DoxyCompactList}\small\item\em k-\/dimension matrix \end{DoxyCompactList}\item 
+\hypertarget{eHmatrix_8h_a2b7e93ddbe409c9c949b122b992b7a17}{typedef \hyperlink{eHmatrix_8h_ae49c64854a3fd231e61b288cb0b3ac59}{matkd\-\_\-t} $\ast$ \hyperlink{eHmatrix_8h_a2b7e93ddbe409c9c949b122b992b7a17}{matkd\-\_\-ptr}}\label{eHmatrix_8h_a2b7e93ddbe409c9c949b122b992b7a17}
+
+\begin{DoxyCompactList}\small\item\em pointer to a k-\/dimension matrix \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHmatrix_8h_ae38c93d3f87f14c008951f0af83e54be}{mat2d\-\_\-ptr} \hyperlink{eHmatrix_8h_acfcec0a467b7f421fe322b4e73938af7}{mat2d\-\_\-alloc} (size\-\_\-t sizy, size\-\_\-t sizx)
+\begin{DoxyCompactList}\small\item\em Allocate a 2\-D matrix. \end{DoxyCompactList}\item 
+void \hyperlink{eHmatrix_8h_a264653b6c756f358b9e8bf8289aa66f5}{mat2d\-\_\-delete} (\hyperlink{eHmatrix_8h_ae38c93d3f87f14c008951f0af83e54be}{mat2d\-\_\-ptr})
+\begin{DoxyCompactList}\small\item\em Destruct a 2\-D matrix. \end{DoxyCompactList}\item 
+\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} \hyperlink{eHmatrix_8h_a9e33d1ffcfa2b56b9a8ecd029f688bf0}{mat3d\-\_\-alloc} (size\-\_\-t sizy, size\-\_\-t sizx, size\-\_\-t sizz)
+\begin{DoxyCompactList}\small\item\em Allocate a 3\-D matrix. \end{DoxyCompactList}\item 
+void \hyperlink{eHmatrix_8h_aa414f0023b051cf33a18fe755787f74b}{mat3d\-\_\-delete} (\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr})
+\begin{DoxyCompactList}\small\item\em Destruct a 3\-D matrix. \end{DoxyCompactList}\item 
+void \hyperlink{eHmatrix_8h_a8271b49c2c244e84351c8573e891277c}{mat3d\-\_\-pad} (\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} mat, const size\-\_\-t $\ast$pad, double pad\-\_\-val)
+\begin{DoxyCompactList}\small\item\em Pad 3d matrix. \end{DoxyCompactList}\item 
+void \hyperlink{eHmatrix_8h_a11f11232847decccb2d0be18b2279369}{mat3d\-\_\-fill} (\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} mat, const size\-\_\-t $\ast$start, const size\-\_\-t $\ast$width, double fill\-\_\-val)
+\begin{DoxyCompactList}\small\item\em Fill continous region of a 3\-D matrix with fill\-\_\-val. \end{DoxyCompactList}\item 
+\hyperlink{eHmatrix_8h_a2b7e93ddbe409c9c949b122b992b7a17}{matkd\-\_\-ptr} \hyperlink{eHmatrix_8h_a1bd7214becd598f8ff87e3373c3acae3}{matkd\-\_\-alloc} (size\-\_\-t k, size\-\_\-t $\ast$sizs)
+\begin{DoxyCompactList}\small\item\em Allocate a k\-D matrix. \end{DoxyCompactList}\item 
+void \hyperlink{eHmatrix_8h_af8ca2cb2e7726d4fdeef8f47189b0692}{matkd\-\_\-delete} (\hyperlink{eHmatrix_8h_a2b7e93ddbe409c9c949b122b992b7a17}{matkd\-\_\-ptr})
+\begin{DoxyCompactList}\small\item\em Delete a k\-D matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic matrix types and operations. \begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/07 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHmatrix_8h_acfcec0a467b7f421fe322b4e73938af7}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat2d\-\_\-alloc@{mat2d\-\_\-alloc}}
+\index{mat2d\-\_\-alloc@{mat2d\-\_\-alloc}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat2d\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat2d\-\_\-ptr} mat2d\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{sizy, }
+\item[{size\-\_\-t}]{sizx}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_acfcec0a467b7f421fe322b4e73938af7}
+
+
+Allocate a 2\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_a264653b6c756f358b9e8bf8289aa66f5}{mat2d\-\_\-delete()} 
+\end{DoxySeeAlso}
+\hypertarget{eHmatrix_8h_a264653b6c756f358b9e8bf8289aa66f5}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat2d\-\_\-delete@{mat2d\-\_\-delete}}
+\index{mat2d\-\_\-delete@{mat2d\-\_\-delete}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat2d\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void mat2d\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf mat2d\-\_\-ptr}}]{}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_a264653b6c756f358b9e8bf8289aa66f5}
+
+
+Destruct a 2\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_acfcec0a467b7f421fe322b4e73938af7}{mat2d\-\_\-alloc()} 
+\end{DoxySeeAlso}
+\hypertarget{eHmatrix_8h_a9e33d1ffcfa2b56b9a8ecd029f688bf0}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat3d\-\_\-alloc@{mat3d\-\_\-alloc}}
+\index{mat3d\-\_\-alloc@{mat3d\-\_\-alloc}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat3d\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3d\-\_\-ptr} mat3d\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{sizy, }
+\item[{size\-\_\-t}]{sizx, }
+\item[{size\-\_\-t}]{sizz}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_a9e33d1ffcfa2b56b9a8ecd029f688bf0}
+
+
+Allocate a 3\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_aa414f0023b051cf33a18fe755787f74b}{mat3d\-\_\-delete()} 
+\end{DoxySeeAlso}
+\hypertarget{eHmatrix_8h_aa414f0023b051cf33a18fe755787f74b}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat3d\-\_\-delete@{mat3d\-\_\-delete}}
+\index{mat3d\-\_\-delete@{mat3d\-\_\-delete}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat3d\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void mat3d\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf mat3d\-\_\-ptr}}]{}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_aa414f0023b051cf33a18fe755787f74b}
+
+
+Destruct a 3\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_a9e33d1ffcfa2b56b9a8ecd029f688bf0}{mat3d\-\_\-alloc()} 
+\end{DoxySeeAlso}
+\hypertarget{eHmatrix_8h_a11f11232847decccb2d0be18b2279369}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat3d\-\_\-fill@{mat3d\-\_\-fill}}
+\index{mat3d\-\_\-fill@{mat3d\-\_\-fill}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat3d\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}void mat3d\-\_\-fill (
+\begin{DoxyParamCaption}
+\item[{{\bf mat3d\-\_\-ptr}}]{mat, }
+\item[{const size\-\_\-t $\ast$}]{start, }
+\item[{const size\-\_\-t $\ast$}]{width, }
+\item[{double}]{fill\-\_\-val}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_a11f11232847decccb2d0be18b2279369}
+
+
+Fill continous region of a 3\-D matrix with fill\-\_\-val. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & starting point \\
+\hline
+{\em width} & width in each dimension \\
+\hline
+{\em fill\-\_\-val} & the value to be filled in \\
+\hline
+\end{DoxyParams}
+\hypertarget{eHmatrix_8h_a8271b49c2c244e84351c8573e891277c}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!mat3d\-\_\-pad@{mat3d\-\_\-pad}}
+\index{mat3d\-\_\-pad@{mat3d\-\_\-pad}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{mat3d\-\_\-pad}]{\setlength{\rightskip}{0pt plus 5cm}void mat3d\-\_\-pad (
+\begin{DoxyParamCaption}
+\item[{{\bf mat3d\-\_\-ptr}}]{mat, }
+\item[{const size\-\_\-t $\ast$}]{pad, }
+\item[{double}]{pad\-\_\-val}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_a8271b49c2c244e84351c8573e891277c}
+
+
+Pad 3d matrix. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pad} & width of padding along each dimension \\
+\hline
+{\em pad\-\_\-val} & values to be padded in each dimension \\
+\hline
+\end{DoxyParams}
+\hypertarget{eHmatrix_8h_a1bd7214becd598f8ff87e3373c3acae3}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!matkd\-\_\-alloc@{matkd\-\_\-alloc}}
+\index{matkd\-\_\-alloc@{matkd\-\_\-alloc}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{matkd\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf matkd\-\_\-ptr} matkd\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{k, }
+\item[{size\-\_\-t $\ast$}]{sizs}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_a1bd7214becd598f8ff87e3373c3acae3}
+
+
+Allocate a k\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_af8ca2cb2e7726d4fdeef8f47189b0692}{matkd\-\_\-delete()} 
+\end{DoxySeeAlso}
+\hypertarget{eHmatrix_8h_af8ca2cb2e7726d4fdeef8f47189b0692}{\index{e\-Hmatrix.\-h@{e\-Hmatrix.\-h}!matkd\-\_\-delete@{matkd\-\_\-delete}}
+\index{matkd\-\_\-delete@{matkd\-\_\-delete}!eHmatrix.h@{e\-Hmatrix.\-h}}
+\subsubsection[{matkd\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void matkd\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf matkd\-\_\-ptr}}]{}
+\end{DoxyParamCaption}
+)}}\label{eHmatrix_8h_af8ca2cb2e7726d4fdeef8f47189b0692}
+
+
+Delete a k\-D matrix. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHmatrix_8h_a1bd7214becd598f8ff87e3373c3acae3}{matkd\-\_\-alloc()} 
+\end{DoxySeeAlso}

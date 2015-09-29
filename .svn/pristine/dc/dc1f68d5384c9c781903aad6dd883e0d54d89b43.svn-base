@@ -1,0 +1,136 @@
+\hypertarget{eHposemodel_8h}{\section{e\-Hposemodel.\-h File Reference}
+\label{eHposemodel_8h}\index{e\-Hposemodel.\-h@{e\-Hposemodel.\-h}}
+}
+
+
+Human body/pose detection model and operations.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}e\-Himage.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hfilter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hbbox.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHposemodel}{e\-Hposemodel}
+\begin{DoxyCompactList}\small\item\em Human body/pose mdoel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHposemodel_8h_a50e44ba3e1cd71af1ce2076a26f9fea4}{typedef struct deformation\-\_\-pose {\bfseries posedef\-\_\-t}}\label{eHposemodel_8h_a50e44ba3e1cd71af1ce2076a26f9fea4}
+
+\item 
+\hypertarget{eHposemodel_8h_a5f36885a789507307ad485e619fe2f19}{typedef struct part\-\_\-pose {\bfseries posepart\-\_\-t}}\label{eHposemodel_8h_a5f36885a789507307ad485e619fe2f19}
+
+\item 
+\hypertarget{eHposemodel_8h_a05d164815bbaf8e3558165ba6a32e9fd}{typedef struct bias\-\_\-pose {\bfseries posebias\-\_\-t}}\label{eHposemodel_8h_a05d164815bbaf8e3558165ba6a32e9fd}
+
+\item 
+\hypertarget{eHposemodel_8h_a3078eabb7a2403232176f0464626773d}{typedef struct \hyperlink{structeHposemodel}{e\-Hposemodel} {\bfseries posemodel\-\_\-t}}\label{eHposemodel_8h_a3078eabb7a2403232176f0464626773d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$ \hyperlink{eHposemodel_8h_a04c13b2b55be485453d6e2784771299b}{posemodel\-\_\-parse\-Xml} (char $\ast$xmlstr)
+\begin{DoxyCompactList}\small\item\em Parse body/pose model from xml style string. \end{DoxyCompactList}\item 
+\hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$ \hyperlink{eHposemodel_8h_a19b6e1f6163967185a8fee8a885c560c}{posemodel\-\_\-read\-From\-File} (const char $\ast$filepath)
+\begin{DoxyCompactList}\small\item\em Read body/pose model from file. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHposemodel_8h_a373b2f2bcb960aaaedc16c5a8063c534}{posemodel\-\_\-detect} (const \hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$model, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, double thrs)
+\begin{DoxyCompactList}\small\item\em Perform body/pose detection. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHposemodel_8h_aaee1003081a315a5c9c5f7a84ee61a21}{posemodel\-\_\-detect} (const \hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$model, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img)
+\begin{DoxyCompactList}\small\item\em Perform body/pose detection using default threshold. \end{DoxyCompactList}\item 
+\hypertarget{eHposemodel_8h_a97e4c0059e6554b9e7a377ea488e15ba}{void \hyperlink{eHposemodel_8h_a97e4c0059e6554b9e7a377ea488e15ba}{posemodel\-\_\-delete} (\hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$model)}\label{eHposemodel_8h_a97e4c0059e6554b9e7a377ea488e15ba}
+
+\begin{DoxyCompactList}\small\item\em Delete a pose model, release related memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Human body/pose detection model and operations. \begin{DoxySeeAlso}{See Also}
+Y. Yang, D. Ramanan, \char`\"{}\-Articulated Pose Estimation using Flexible Mixtures of Parts\char`\"{}. In C\-V\-P\-R 2011.
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHposemodel_8h_a373b2f2bcb960aaaedc16c5a8063c534}{\index{e\-Hposemodel.\-h@{e\-Hposemodel.\-h}!posemodel\-\_\-detect@{posemodel\-\_\-detect}}
+\index{posemodel\-\_\-detect@{posemodel\-\_\-detect}!eHposemodel.h@{e\-Hposemodel.\-h}}
+\subsubsection[{posemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ posemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf posemodel\-\_\-t} $\ast$}]{model, }
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{double}]{thrs}
+\end{DoxyParamCaption}
+)}}\label{eHposemodel_8h_a373b2f2bcb960aaaedc16c5a8063c534}
+
+
+Perform body/pose detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & pose detection model \\
+\hline
+{\em img} & where to find human poses from \\
+\hline
+{\em thrs} & threshold used for pruning results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected poses (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHposemodel_8h_aaee1003081a315a5c9c5f7a84ee61a21}{\index{e\-Hposemodel.\-h@{e\-Hposemodel.\-h}!posemodel\-\_\-detect@{posemodel\-\_\-detect}}
+\index{posemodel\-\_\-detect@{posemodel\-\_\-detect}!eHposemodel.h@{e\-Hposemodel.\-h}}
+\subsubsection[{posemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ posemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf posemodel\-\_\-t} $\ast$}]{model, }
+\item[{const {\bf image\-\_\-ptr}}]{img}
+\end{DoxyParamCaption}
+)}}\label{eHposemodel_8h_aaee1003081a315a5c9c5f7a84ee61a21}
+
+
+Perform body/pose detection using default threshold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & pose detection model \\
+\hline
+{\em img} & where to find human poses from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected poses (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHposemodel_8h_a04c13b2b55be485453d6e2784771299b}{\index{e\-Hposemodel.\-h@{e\-Hposemodel.\-h}!posemodel\-\_\-parse\-Xml@{posemodel\-\_\-parse\-Xml}}
+\index{posemodel\-\_\-parse\-Xml@{posemodel\-\_\-parse\-Xml}!eHposemodel.h@{e\-Hposemodel.\-h}}
+\subsubsection[{posemodel\-\_\-parse\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}{\bf posemodel\-\_\-t}$\ast$ posemodel\-\_\-parse\-Xml (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{xmlstr}
+\end{DoxyParamCaption}
+)}}\label{eHposemodel_8h_a04c13b2b55be485453d6e2784771299b}
+
+
+Parse body/pose model from xml style string. 
+
+\begin{DoxyNote}{Note}
+xmlstr is modified during parsing, this can be avoided by using Non-\/\-Destrutive Mode of rapidxml 
+\end{DoxyNote}
+\hypertarget{eHposemodel_8h_a19b6e1f6163967185a8fee8a885c560c}{\index{e\-Hposemodel.\-h@{e\-Hposemodel.\-h}!posemodel\-\_\-read\-From\-File@{posemodel\-\_\-read\-From\-File}}
+\index{posemodel\-\_\-read\-From\-File@{posemodel\-\_\-read\-From\-File}!eHposemodel.h@{e\-Hposemodel.\-h}}
+\subsubsection[{posemodel\-\_\-read\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf posemodel\-\_\-t}$\ast$ posemodel\-\_\-read\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filepath}
+\end{DoxyParamCaption}
+)}}\label{eHposemodel_8h_a19b6e1f6163967185a8fee8a885c560c}
+
+
+Read body/pose model from file. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHposemodel_8h_a04c13b2b55be485453d6e2784771299b}{posemodel\-\_\-parse\-Xml()} 
+\end{DoxySeeAlso}

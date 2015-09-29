@@ -1,0 +1,110 @@
+\hypertarget{eHfilter_8h}{\section{e\-Hfilter.\-h File Reference}
+\label{eHfilter_8h}\index{e\-Hfilter.\-h@{e\-Hfilter.\-h}}
+}
+
+
+Filters applied on image features.  
+
+
+{\ttfamily \#include \char`\"{}e\-Hmatrix.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHfilter}{e\-Hfilter}
+\begin{DoxyCompactList}\small\item\em Image feature filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}{typedef struct \hyperlink{structeHfilter}{e\-Hfilter} \hyperlink{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}{filter\-\_\-t}}\label{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}
+
+\begin{DoxyCompactList}\small\item\em Image feature filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} \hyperlink{eHfilter_8h_a83e3841e4d736b0ae86bab49e67d98a7}{filterv\-\_\-apply} (const std\-::vector$<$ \hyperlink{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}{filter\-\_\-t} $>$ filters, const \hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} feats, int start, int end)
+\begin{DoxyCompactList}\small\item\em Convolve a feature map with a set of filters -\/ Multithreaded version. \end{DoxyCompactList}\item 
+\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} \hyperlink{eHfilter_8h_ae3d66d151a10b9882f29b2ac65ee0f37}{filterv\-\_\-apply\-\_\-\-S\-T} (const std\-::vector$<$ \hyperlink{eHfilter_8h_a31d0710a76998e6bea728a5c5ea09538}{filter\-\_\-t} $>$ filters, const \hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} feats, int start, int end)
+\begin{DoxyCompactList}\small\item\em Convolve a feature map with a set of filters -\/ Singlethreaded version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Filters applied on image features. \begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHfilter_8h_a83e3841e4d736b0ae86bab49e67d98a7}{\index{e\-Hfilter.\-h@{e\-Hfilter.\-h}!filterv\-\_\-apply@{filterv\-\_\-apply}}
+\index{filterv\-\_\-apply@{filterv\-\_\-apply}!eHfilter.h@{e\-Hfilter.\-h}}
+\subsubsection[{filterv\-\_\-apply}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3d\-\_\-ptr} filterv\-\_\-apply (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf filter\-\_\-t} $>$}]{filters, }
+\item[{const {\bf mat3d\-\_\-ptr}}]{feats, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{eHfilter_8h_a83e3841e4d736b0ae86bab49e67d98a7}
+
+
+Convolve a feature map with a set of filters -\/ Multithreaded version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filters} & a set of part filters \\
+\hline
+{\em feats} & feature map \\
+\hline
+{\em start} & range of filters used -\/ first one \\
+\hline
+{\em end} & range of filters used -\/ last one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+filter responses 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+filter responses is allocated inside, proper delete is necessary after use 
+
+cblas library is required 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHfilter_8h_ae3d66d151a10b9882f29b2ac65ee0f37}{filterv\-\_\-apply\-\_\-\-S\-T()} 
+\end{DoxySeeAlso}
+\hypertarget{eHfilter_8h_ae3d66d151a10b9882f29b2ac65ee0f37}{\index{e\-Hfilter.\-h@{e\-Hfilter.\-h}!filterv\-\_\-apply\-\_\-\-S\-T@{filterv\-\_\-apply\-\_\-\-S\-T}}
+\index{filterv\-\_\-apply\-\_\-\-S\-T@{filterv\-\_\-apply\-\_\-\-S\-T}!eHfilter.h@{e\-Hfilter.\-h}}
+\subsubsection[{filterv\-\_\-apply\-\_\-\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3d\-\_\-ptr} filterv\-\_\-apply\-\_\-\-S\-T (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf filter\-\_\-t} $>$}]{filters, }
+\item[{const {\bf mat3d\-\_\-ptr}}]{feats, }
+\item[{int}]{start, }
+\item[{int}]{end}
+\end{DoxyParamCaption}
+)}}\label{eHfilter_8h_ae3d66d151a10b9882f29b2ac65ee0f37}
+
+
+Convolve a feature map with a set of filters -\/ Singlethreaded version. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filters} & a set of part filters \\
+\hline
+{\em feats} & feature map \\
+\hline
+{\em start} & range of filters used -\/ first one \\
+\hline
+{\em end} & range of filters used -\/ last one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+filter responses 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+filter responses is allocated inside, proper delete is necessary after use 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHfilter_8h_a83e3841e4d736b0ae86bab49e67d98a7}{filterv\-\_\-apply()} 
+\end{DoxySeeAlso}

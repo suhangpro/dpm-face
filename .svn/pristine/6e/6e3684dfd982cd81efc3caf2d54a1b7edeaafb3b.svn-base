@@ -1,0 +1,194 @@
+\hypertarget{eHfacemodel_8h}{\section{e\-Hfacemodel.\-h File Reference}
+\label{eHfacemodel_8h}\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}}
+}
+
+
+face detection model and operations  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}e\-Himage.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hfilter.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hbbox.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hposemodel.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHfacemodel}{e\-Hfacemodel}
+\begin{DoxyCompactList}\small\item\em Face detection model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHfacemodel_8h_a0788b69790cd3274009a807c09156178}{typedef struct deformation\-\_\-face {\bfseries facedef\-\_\-t}}\label{eHfacemodel_8h_a0788b69790cd3274009a807c09156178}
+
+\item 
+\hypertarget{eHfacemodel_8h_a965efb2930fd388585b65e7bde9ed0ea}{typedef struct part\-\_\-face {\bfseries facepart\-\_\-t}}\label{eHfacemodel_8h_a965efb2930fd388585b65e7bde9ed0ea}
+
+\item 
+\hypertarget{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{typedef struct \hyperlink{structeHfacemodel}{e\-Hfacemodel} \hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t}}\label{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}
+
+\begin{DoxyCompactList}\small\item\em Face detection model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$ \hyperlink{eHfacemodel_8h_acaadf7088a9bc09cde629c1a5ffdbef8}{facemodel\-\_\-parse\-Xml} (char $\ast$xmlstr)
+\begin{DoxyCompactList}\small\item\em Parse face model from xml style string. \end{DoxyCompactList}\item 
+\hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$ \hyperlink{eHfacemodel_8h_ad4280336a222d4cb21277ee2bba2610d}{facemodel\-\_\-read\-From\-File} (const char $\ast$filepath)
+\begin{DoxyCompactList}\small\item\em Read face model from file. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHfacemodel_8h_ae2738f30fc93eb4755d38130c19b38a5}{facemodel\-\_\-detect} (const \hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$model, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, double thrs)
+\begin{DoxyCompactList}\small\item\em Perform face detection. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHfacemodel_8h_ace4ec4bc05752437d5b87e9227cf8fe2}{facemodel\-\_\-detect} (const \hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$model, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img)
+\begin{DoxyCompactList}\small\item\em Perform face detection using threshold inside model. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHfacemodel_8h_acbc77e48ba7f115aa1ce9807c365068d}{facemodel\-\_\-detect} (const \hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$facemodel, const \hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$posemodel, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, double thrs\-\_\-face, double thrs\-\_\-pose)
+\begin{DoxyCompactList}\small\item\em Perform face detection with help of body detection. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \hyperlink{eHfacemodel_8h_a4cb236065a28c4b06816e829c6346444}{facemodel\-\_\-detect} (const \hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$facemodel, const \hyperlink{structeHposemodel}{posemodel\-\_\-t} $\ast$posemodel, const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img)
+\begin{DoxyCompactList}\small\item\em Perform face detection with help of body detection using thresholds inside models. \end{DoxyCompactList}\item 
+\hypertarget{eHfacemodel_8h_a4c90860ca8b9f20085681d86b071c219}{void \hyperlink{eHfacemodel_8h_a4c90860ca8b9f20085681d86b071c219}{facemodel\-\_\-delete} (\hyperlink{eHfacemodel_8h_a65c16dc5d5d3e8ef8673a89292fe1357}{facemodel\-\_\-t} $\ast$model)}\label{eHfacemodel_8h_a4c90860ca8b9f20085681d86b071c219}
+
+\begin{DoxyCompactList}\small\item\em Delete a face model, release related memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+face detection model and operations \begin{DoxySeeAlso}{See Also}
+Xiangzin Zhu, Deva Ramanan, \char`\"{}\-Face Detection, Pose Estimation, and landmark Localization in the Wild\char`\"{}. In C\-V\-P\-R 2012.
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/13 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHfacemodel_8h_ae2738f30fc93eb4755d38130c19b38a5}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-detect@{facemodel\-\_\-detect}}
+\index{facemodel\-\_\-detect@{facemodel\-\_\-detect}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ facemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf facemodel\-\_\-t} $\ast$}]{model, }
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{double}]{thrs}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_ae2738f30fc93eb4755d38130c19b38a5}
+
+
+Perform face detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & face detection model \\
+\hline
+{\em img} & where to find faces from \\
+\hline
+{\em thrs} & threshold used for pruning results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected faces (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHfacemodel_8h_ace4ec4bc05752437d5b87e9227cf8fe2}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-detect@{facemodel\-\_\-detect}}
+\index{facemodel\-\_\-detect@{facemodel\-\_\-detect}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ facemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf facemodel\-\_\-t} $\ast$}]{model, }
+\item[{const {\bf image\-\_\-ptr}}]{img}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_ace4ec4bc05752437d5b87e9227cf8fe2}
+
+
+Perform face detection using threshold inside model. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & face detection model \\
+\hline
+{\em img} & where to find faces from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected faces (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHfacemodel_8h_acbc77e48ba7f115aa1ce9807c365068d}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-detect@{facemodel\-\_\-detect}}
+\index{facemodel\-\_\-detect@{facemodel\-\_\-detect}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ facemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf facemodel\-\_\-t} $\ast$}]{facemodel, }
+\item[{const {\bf posemodel\-\_\-t} $\ast$}]{posemodel, }
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{double}]{thrs\-\_\-face, }
+\item[{double}]{thrs\-\_\-pose}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_acbc77e48ba7f115aa1ce9807c365068d}
+
+
+Perform face detection with help of body detection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em facemodel} & face detection model \\
+\hline
+{\em posemodel} & body pose detection model \\
+\hline
+{\em img} & where to find faces from \\
+\hline
+{\em thrs\-\_\-face} & threshold used for pruning face detections \\
+\hline
+{\em thrs\-\_\-pose} & threshold used for pruning pose detections \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected faces (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHfacemodel_8h_a4cb236065a28c4b06816e829c6346444}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-detect@{facemodel\-\_\-detect}}
+\index{facemodel\-\_\-detect@{facemodel\-\_\-detect}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf bbox\-\_\-t}$>$ facemodel\-\_\-detect (
+\begin{DoxyParamCaption}
+\item[{const {\bf facemodel\-\_\-t} $\ast$}]{facemodel, }
+\item[{const {\bf posemodel\-\_\-t} $\ast$}]{posemodel, }
+\item[{const {\bf image\-\_\-ptr}}]{img}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_a4cb236065a28c4b06816e829c6346444}
+
+
+Perform face detection with help of body detection using thresholds inside models. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em facemodel} & face detection model \\
+\hline
+{\em posemodel} & body pose detection model \\
+\hline
+{\em img} & where to find faces from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of detected faces (together with part locations) 
+\end{DoxyReturn}
+\hypertarget{eHfacemodel_8h_acaadf7088a9bc09cde629c1a5ffdbef8}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-parse\-Xml@{facemodel\-\_\-parse\-Xml}}
+\index{facemodel\-\_\-parse\-Xml@{facemodel\-\_\-parse\-Xml}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-parse\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}{\bf facemodel\-\_\-t}$\ast$ facemodel\-\_\-parse\-Xml (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{xmlstr}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_acaadf7088a9bc09cde629c1a5ffdbef8}
+
+
+Parse face model from xml style string. 
+
+\begin{DoxyNote}{Note}
+xmlstr is modified during parsing, this can be avoided by using Non-\/\-Destrutive Mode of rapidxml 
+\end{DoxyNote}
+\hypertarget{eHfacemodel_8h_ad4280336a222d4cb21277ee2bba2610d}{\index{e\-Hfacemodel.\-h@{e\-Hfacemodel.\-h}!facemodel\-\_\-read\-From\-File@{facemodel\-\_\-read\-From\-File}}
+\index{facemodel\-\_\-read\-From\-File@{facemodel\-\_\-read\-From\-File}!eHfacemodel.h@{e\-Hfacemodel.\-h}}
+\subsubsection[{facemodel\-\_\-read\-From\-File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf facemodel\-\_\-t}$\ast$ facemodel\-\_\-read\-From\-File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filepath}
+\end{DoxyParamCaption}
+)}}\label{eHfacemodel_8h_ad4280336a222d4cb21277ee2bba2610d}
+
+
+Read face model from file. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHfacemodel_8h_acaadf7088a9bc09cde629c1a5ffdbef8}{facemodel\-\_\-parse\-Xml()} 
+\end{DoxySeeAlso}

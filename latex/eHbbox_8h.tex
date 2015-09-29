@@ -1,0 +1,141 @@
+\hypertarget{eHbbox_8h}{\section{e\-Hbbox.\-h File Reference}
+\label{eHbbox_8h}\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}}
+}
+
+
+Multi-\/box bounding box type and operations.  
+
+
+{\ttfamily \#include \char`\"{}e\-Hbox.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHbbox}{e\-Hbbox}
+\begin{DoxyCompactList}\small\item\em Multi-\/box \char`\"{}bounding box\char`\"{}, used for detection result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{eHbbox_8h_ad7a8d677cb353b071929ad40b6b4a77a}{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E}~30000
+\begin{DoxyCompactList}\small\item\em Default pruning parameter for \hyperlink{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}{bbox\-\_\-v\-\_\-nms()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{typedef struct \hyperlink{structeHbbox}{e\-Hbbox} \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t}}\label{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}
+
+\begin{DoxyCompactList}\small\item\em Multi-\/box \char`\"{}bounding box\char`\"{}, used for detection result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHbbox_8h_a6bb65f6ddd89207febb00d93301ffc0d}{void \hyperlink{eHbbox_8h_a6bb65f6ddd89207febb00d93301ffc0d}{bbox\-\_\-calc\-Out} (\hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $\ast$)}\label{eHbbox_8h_a6bb65f6ddd89207febb00d93301ffc0d}
+
+\begin{DoxyCompactList}\small\item\em Filling the fields of given bbox\-: outer, area. \end{DoxyCompactList}\item 
+void \hyperlink{eHbbox_8h_aab9986b2e6b74a6d3eb894888fcc165e}{bbox\-\_\-clipboxes} (\hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} \&bbox, const int $\ast$imsize)
+\begin{DoxyCompactList}\small\item\em Clip the boxes to image boundary. \end{DoxyCompactList}\item 
+void \hyperlink{eHbbox_8h_ae15251cf96f9ccf45e3287010157377f}{bbox\-\_\-v\-\_\-resize} (std\-::vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \&bboxes, double scale)
+\begin{DoxyCompactList}\small\item\em Resize the input bboxs (in-\/place) \end{DoxyCompactList}\item 
+void \hyperlink{eHbbox_8h_a2147ef8bb9c913637975e31bc6ba103c}{bbox\-\_\-v\-\_\-move} (std\-::vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \&bboxes, const int $\ast$offset)
+\begin{DoxyCompactList}\small\item\em Move the input bboxs (in-\/place) \end{DoxyCompactList}\item 
+void \hyperlink{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}{bbox\-\_\-v\-\_\-nms} (std\-::vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ \&bboxes, double overlap, unsigned prune=\hyperlink{eHbbox_8h_ad7a8d677cb353b071929ad40b6b4a77a}{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E})
+\begin{DoxyCompactList}\small\item\em Non-\/maximum suppression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multi-\/box bounding box type and operations. A \char`\"{}bounding box\char`\"{} is defined as a collection of boxes, which serve as detection results of different parts for part-\/based detection algorithms.
+
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/13 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{eHbbox_8h_ad7a8d677cb353b071929ad40b6b4a77a}{\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}!E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E@{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E}}
+\index{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E@{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E}!eHbbox.h@{e\-Hbbox.\-h}}
+\subsubsection[{E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E~30000}}\label{eHbbox_8h_ad7a8d677cb353b071929ad40b6b4a77a}
+
+
+Default pruning parameter for \hyperlink{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}{bbox\-\_\-v\-\_\-nms()} 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}{bbox\-\_\-v\-\_\-nms()} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHbbox_8h_aab9986b2e6b74a6d3eb894888fcc165e}{\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}!bbox\-\_\-clipboxes@{bbox\-\_\-clipboxes}}
+\index{bbox\-\_\-clipboxes@{bbox\-\_\-clipboxes}!eHbbox.h@{e\-Hbbox.\-h}}
+\subsubsection[{bbox\-\_\-clipboxes}]{\setlength{\rightskip}{0pt plus 5cm}void bbox\-\_\-clipboxes (
+\begin{DoxyParamCaption}
+\item[{{\bf bbox\-\_\-t} \&}]{bbox, }
+\item[{const int $\ast$}]{imsize}
+\end{DoxyParamCaption}
+)}}\label{eHbbox_8h_aab9986b2e6b74a6d3eb894888fcc165e}
+
+
+Clip the boxes to image boundary. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em imsize} & imsize\mbox{[}0\mbox{]}=height, imsize\mbox{[}1\mbox{]}=width \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a33ec0cbec476f897c0f2849e8521051c}{fbox\-\_\-clip()} 
+\end{DoxySeeAlso}
+\hypertarget{eHbbox_8h_a2147ef8bb9c913637975e31bc6ba103c}{\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}!bbox\-\_\-v\-\_\-move@{bbox\-\_\-v\-\_\-move}}
+\index{bbox\-\_\-v\-\_\-move@{bbox\-\_\-v\-\_\-move}!eHbbox.h@{e\-Hbbox.\-h}}
+\subsubsection[{bbox\-\_\-v\-\_\-move}]{\setlength{\rightskip}{0pt plus 5cm}void bbox\-\_\-v\-\_\-move (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf bbox\-\_\-t} $>$ \&}]{bboxes, }
+\item[{const int $\ast$}]{offset}
+\end{DoxyParamCaption}
+)}}\label{eHbbox_8h_a2147ef8bb9c913637975e31bc6ba103c}
+
+
+Move the input bboxs (in-\/place) 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a94dc7dceaa7ee714b1bd99b30f64a8c5}{fbox\-\_\-move()} 
+\end{DoxySeeAlso}
+\hypertarget{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}{\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}!bbox\-\_\-v\-\_\-nms@{bbox\-\_\-v\-\_\-nms}}
+\index{bbox\-\_\-v\-\_\-nms@{bbox\-\_\-v\-\_\-nms}!eHbbox.h@{e\-Hbbox.\-h}}
+\subsubsection[{bbox\-\_\-v\-\_\-nms}]{\setlength{\rightskip}{0pt plus 5cm}void bbox\-\_\-v\-\_\-nms (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf bbox\-\_\-t} $>$ \&}]{bboxes, }
+\item[{double}]{overlap, }
+\item[{unsigned}]{prune = {\ttfamily {\bf E\-H\-\_\-\-B\-B\-O\-X\-S\-\_\-\-P\-R\-U\-N\-E}}}
+\end{DoxyParamCaption}
+)}}\label{eHbbox_8h_af2c8d67fa2c5d15d379a95c2d25c906c}
+
+
+Non-\/maximum suppression. 
+
+Greedily select high-\/scoring detections and skip detections that are significantly coverd by a previously selected detection.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bboxes} & an array of detection results, changed inside function \\
+\hline
+{\em overlap} & two results are not both kept if their overlap ratio exceed this value \\
+\hline
+{\em prune} & initial bboxes are pruned for higher speed \\
+\hline
+\end{DoxyParams}
+\hypertarget{eHbbox_8h_ae15251cf96f9ccf45e3287010157377f}{\index{e\-Hbbox.\-h@{e\-Hbbox.\-h}!bbox\-\_\-v\-\_\-resize@{bbox\-\_\-v\-\_\-resize}}
+\index{bbox\-\_\-v\-\_\-resize@{bbox\-\_\-v\-\_\-resize}!eHbbox.h@{e\-Hbbox.\-h}}
+\subsubsection[{bbox\-\_\-v\-\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}void bbox\-\_\-v\-\_\-resize (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf bbox\-\_\-t} $>$ \&}]{bboxes, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}}\label{eHbbox_8h_ae15251cf96f9ccf45e3287010157377f}
+
+
+Resize the input bboxs (in-\/place) 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHbox_8h_a82abeb82bb9e51fc50bdd70dffe3b7e7}{fbox\-\_\-resize()} 
+\end{DoxySeeAlso}

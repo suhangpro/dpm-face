@@ -1,0 +1,37 @@
+\hypertarget{structeHbox__i}{\section{e\-Hbox\-\_\-i Struct Reference}
+\label{structeHbox__i}\index{e\-Hbox\-\_\-i@{e\-Hbox\-\_\-i}}
+}
+
+
+box with integer boundaries  
+
+
+
+
+{\ttfamily \#include $<$e\-Hbox.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHbox__i_a2dc32f539b205b93a4ebaf2af1cd0de5}{int \hyperlink{structeHbox__i_a2dc32f539b205b93a4ebaf2af1cd0de5}{x1}}\label{structeHbox__i_a2dc32f539b205b93a4ebaf2af1cd0de5}
+
+\begin{DoxyCompactList}\small\item\em left bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__i_a8fb63de1e169b5d5829ad5461c29c67b}{int \hyperlink{structeHbox__i_a8fb63de1e169b5d5829ad5461c29c67b}{y1}}\label{structeHbox__i_a8fb63de1e169b5d5829ad5461c29c67b}
+
+\begin{DoxyCompactList}\small\item\em up bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__i_a83360dc7f21b5e21e11c6a4c8d24b64a}{int \hyperlink{structeHbox__i_a83360dc7f21b5e21e11c6a4c8d24b64a}{x2}}\label{structeHbox__i_a83360dc7f21b5e21e11c6a4c8d24b64a}
+
+\begin{DoxyCompactList}\small\item\em right bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__i_a00f298dd8b5bd49c63d333a9bc0a10d4}{int \hyperlink{structeHbox__i_a00f298dd8b5bd49c63d333a9bc0a10d4}{y2}}\label{structeHbox__i_a00f298dd8b5bd49c63d333a9bc0a10d4}
+
+\begin{DoxyCompactList}\small\item\em bottom bound \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+box with integer boundaries 
+
+Boxes are defined as tuples (x1, y1, x2, y2), where x1$<$=x2, y1$<$=y2; so (x1,y1) is the top-\/left corner, (x2,y2) is the bottom-\/right corner. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHbox_8h}{e\-Hbox.\-h}\end{DoxyCompactItemize}

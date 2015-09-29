@@ -1,0 +1,129 @@
+
+
+This project provides a C++ implementation for human face detection with Alignment from unconstrained photos. Below is a brief manual, detailed documentation is generated using doxygen. \par
+ {\bfseries Tip} All the data structurs and functions are arranged in C style, you can use the {\itshape Files} tab to have an overview. \par
+\par
+ Implemented by \href{http://cs.umass.edu/~hsu}{\tt Hang Su}.
+
+    \section*{Installation}
+
+ \subsubsection*{Checkout latest code}
+
+ svn checkout http\-://eharmony-\/photofeature.\-googlecode.\-com/svn/trunk/ eharmony-\/photofeature-\/read-\/only \subsubsection*{Dependencies}
+
+ 
+
+The code depends on \href{http://opencv.willowgarage.com/}{\tt Open\-C\-V} to load/dispaly image. To install Open\-C\-V on Ubuntu/\-Debian\-: 
+
+ sudo apt-\/get install libopencv-\/dev 
+
+A cblas library should also be installed, e.\-g. \par
+ Ubuntu/\-Debian 
+
+
+
+sudo apt-\/get install libblas-\/dev
+
+ Fedora 
+
+ sudo yum install atlas-\/sse3-\/devel.\-x86\-\_\-64
+
+\subsubsection*{Compilation}
+
+ make all
+
+\section*{Usage example}
+
+ 
+\begin{DoxyEnumerate}
+\item \#include \char`\"{}e\-Himage.\-h\char`\"{}  
+\item \#include \char`\"{}e\-Hfacemodel.\-h\char`\"{}  
+\item \#include \char`\"{}e\-Hposemodel.\-h\char`\"{}  
+\item \#include \char`\"{}e\-Hbbox.\-h\char`\"{}  
+\item \#include $<$vector$>$  
+\item ~  
+\item int main(int argc, char$\ast$$\ast$ argv)\{  
+\item ~ ~ //load face model \& body model  
+\item ~ ~ facemodel\-\_\-t$\ast$ facemodel = facemodel\-\_\-read\-From\-File(\char`\"{}face\-\_\-p146.\-xml\char`\"{});  
+\item ~ ~ posemodel\-\_\-t$\ast$ posemodel = posemodel\-\_\-read\-From\-File(\char`\"{}pose\-\_\-\-B\-U\-F\-F\-Y.\-xml\char`\"{});  
+\item ~  
+\item ~ ~ //load a jpeg image  
+\item ~ ~ image\-\_\-t$\ast$ img = image\-\_\-read\-J\-P\-G(argv\mbox{[}1\mbox{]});  
+\item ~ ~   
+\item ~ ~ //detect faces and show results  
+\item ~ ~ std\-:\-:vector$<$bbox\-\_\-t$>$ faces = facemodel\-\_\-detect(facemodel,posemodel,img);  
+\item ~ ~ image\-\_\-show\-Detection(img, faces, \char`\"{}\-Face Detection Results\char`\"{});  
+\item ~ ~   
+\item ~ ~ //destruct image and models  
+\item ~ ~ image\-\_\-delete(img);  
+\item ~ ~ facemodel\-\_\-delete(facemodel);  
+\item ~ ~ posemodel\-\_\-delete(posemodel);  
+\item ~  
+\item ~ ~ return 0;  
+\item \}  
+\end{DoxyEnumerate}\subsubsection*{Image data structure and operation}
+
+ 
+
+A structure type {\itshape image\-\_\-t} is defined to present images. Some usesful operations are also provided, e.\-g. to load a jpeg image from file, use 
+
+ image\-\_\-ptr image\-\_\-read\-J\-P\-G (const char $\ast$filename)
+
+ To delete an image, use 
+
+ void image\-\_\-delete (image\-\_\-ptr img)\subsubsection*{Face detection}
+
+ 
+
+Face detection is based on algorithm described in \mbox{[}1\mbox{]}. Pre-\/trained models are provided in X\-M\-L format. \par
+ To load a face model, use 
+
+ facemodel\-\_\-t $\ast$ ~ facemodel\-\_\-read\-From\-File (const char $\ast$filepath)
+
+ To detect faces, use 
+
+ vector$<$ bbox\-\_\-t $>$ ~ ~facemodel\-\_\-detect (const facemodel\-\_\-t $\ast$model, const image\-\_\-ptr img)
+
+ A body detection model (described below) can also be combined to help improve detection performace 
+
+ vector$<$ bbox\-\_\-t $>$ ~ ~facemodel\-\_\-detect (const facemodel\-\_\-t $\ast$facemodel, const posemodel\-\_\-t $\ast$posemodel, const image\-\_\-ptr img)
+
+ Results can be visualized using 
+
+ void ~ ~image\-\_\-show\-Detection (const image\-\_\-ptr img, const vector$<$ bbox\-\_\-t $>$ boxes, const std\-:\-:string \&winname)
+
+ or 
+
+ void ~ ~image\-\_\-show\-Faces (const image\-\_\-ptr img, const vector$<$ bbox\-\_\-t $>$ boxes, const std\-:\-:string \&winname)
+
+ Finally, a face model can be deleted using \par
+ 
+
+ void ~ ~facemodel\-\_\-delete (facemodel\-\_\-t $\ast$model)\subsubsection*{Body/pose detection}
+
+ 
+
+Human body detection is based on algorithm described in \mbox{[}2\mbox{]}. Pre-\/trained models are provided in X\-M\-L format. \par
+ To load a pose model, use 
+
+ posemodel\-\_\-t$\ast$ posemodel\-\_\-read\-From\-File(const char$\ast$ filepath)
+
+ To detect poses, use 
+
+ vector$<$bbox\-\_\-t$>$ posemodel\-\_\-detect(const posemodel\-\_\-t$\ast$ model, const image\-\_\-ptr img)
+
+ Results can be visualized using 
+
+ void ~ ~image\-\_\-show\-Detection (const image\-\_\-ptr img, const vector$<$ bbox\-\_\-t $>$ boxes, const std\-:\-:string \&winname)
+
+ Finally, the model can be deleted using 
+
+ void posemodel\-\_\-delete(posemodel\-\_\-t$\ast$ model)\section*{References}
+
+ 
+
+\mbox{[}1\mbox{]} X. Zhu, D. Ramanan. {\bfseries \char`\"{}\-Face detection, pose estimation and landmark localization in the wild\char`\"{}} Computer Vision and Pattern Recognition (C\-V\-P\-R) Providence, Rhode Island, June 2012. \par
+ \mbox{[}2\mbox{]} Y. Yang, D. Ramanan. {\bfseries \char`\"{}\-Articulated Pose Estimation using Flexible Mixtures of Parts\char`\"{}} Computer Vision and Pattern Recognition (C\-V\-P\-R) Colorado Springs, Colorado, June 2011. \par
+ 
+
+  

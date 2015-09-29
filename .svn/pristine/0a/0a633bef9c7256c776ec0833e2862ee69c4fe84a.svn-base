@@ -1,0 +1,56 @@
+\hypertarget{structeHbbox}{\section{e\-Hbbox Struct Reference}
+\label{structeHbbox}\index{e\-Hbbox@{e\-Hbbox}}
+}
+
+
+Multi-\/box \char`\"{}bounding box\char`\"{}, used for detection result.  
+
+
+
+
+{\ttfamily \#include $<$e\-Hbbox.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHbbox_a2024e52994a0824e9392fd5f9743b947}{std\-::vector$<$ \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} $>$ \hyperlink{structeHbbox_a2024e52994a0824e9392fd5f9743b947}{boxes}}\label{structeHbbox_a2024e52994a0824e9392fd5f9743b947}
+
+\begin{DoxyCompactList}\small\item\em part locations \end{DoxyCompactList}\item 
+double \hyperlink{structeHbbox_a90d1b31a19d0facdeb4caaaba11af54d}{score}
+\begin{DoxyCompactList}\small\item\em detection score \end{DoxyCompactList}\item 
+int \hyperlink{structeHbbox_a7c6a5e808464ba2420a4b43461a5153e}{component}
+\begin{DoxyCompactList}\small\item\em component id for certain models \end{DoxyCompactList}\item 
+\hypertarget{structeHbbox_aecbaeae671315bf36d947c7fd22ed633}{\hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} \hyperlink{structeHbbox_aecbaeae671315bf36d947c7fd22ed633}{outer}}\label{structeHbbox_aecbaeae671315bf36d947c7fd22ed633}
+
+\begin{DoxyCompactList}\small\item\em outer \char`\"{}real\char`\"{} bounding box of the detection \end{DoxyCompactList}\item 
+\hypertarget{structeHbbox_a8094fe8d4e59fb995b72f2fac8277cc7}{double \hyperlink{structeHbbox_a8094fe8d4e59fb995b72f2fac8277cc7}{area}}\label{structeHbbox_a8094fe8d4e59fb995b72f2fac8277cc7}
+
+\begin{DoxyCompactList}\small\item\em area of outer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Multi-\/box \char`\"{}bounding box\char`\"{}, used for detection result. 
+
+\subsection{Member Data Documentation}
+\hypertarget{structeHbbox_a7c6a5e808464ba2420a4b43461a5153e}{\index{e\-Hbbox@{e\-Hbbox}!component@{component}}
+\index{component@{component}!eHbbox@{e\-Hbbox}}
+\subsubsection[{component}]{\setlength{\rightskip}{0pt plus 5cm}int e\-Hbbox\-::component}}\label{structeHbbox_a7c6a5e808464ba2420a4b43461a5153e}
+
+
+component id for certain models 
+
+Face model has 13 components (id 0$\sim$12) for viewpoints ranging from 90 degree (profile facing right) to -\/90 degree (profile facing left). \hypertarget{structeHbbox_a90d1b31a19d0facdeb4caaaba11af54d}{\index{e\-Hbbox@{e\-Hbbox}!score@{score}}
+\index{score@{score}!eHbbox@{e\-Hbbox}}
+\subsubsection[{score}]{\setlength{\rightskip}{0pt plus 5cm}double e\-Hbbox\-::score}}\label{structeHbbox_a90d1b31a19d0facdeb4caaaba11af54d}
+
+
+detection score 
+
+\begin{DoxyWarning}{Warning}
+not calibrated 
+\end{DoxyWarning}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHbbox_8h}{e\-Hbbox.\-h}\end{DoxyCompactItemize}

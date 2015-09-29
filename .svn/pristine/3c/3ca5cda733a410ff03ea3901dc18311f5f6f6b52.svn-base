@@ -1,0 +1,72 @@
+\hypertarget{eHutils_8h}{\section{e\-Hutils.\-h File Reference}
+\label{eHutils_8h}\index{e\-Hutils.\-h@{e\-Hutils.\-h}}
+}
+
+
+Some useful stuff (string parsing etc. )  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{eHutils_8h_a162956c329a3598a84c94910478f8594}{parse\-C\-S\-Vstr2int} (const char $\ast$csvstr, int $\ast$siz, int offset=0)
+\begin{DoxyCompactList}\small\item\em Parse given string(e.\-g. \char`\"{}10, 5\textbackslash{}0\char`\"{}) to integer array. \end{DoxyCompactList}\item 
+double $\ast$ \hyperlink{eHutils_8h_a8811f888efac678236851b6c17f94b7e}{parse\-C\-S\-Vstr2double} (const char $\ast$csvstr, int $\ast$siz)
+\begin{DoxyCompactList}\small\item\em Parse given string(e.\-g. \char`\"{}1.\-2, 3.\-4\textbackslash{}0\char`\"{}) to double precision array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Some useful stuff (string parsing etc. ) \begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHutils_8h_a8811f888efac678236851b6c17f94b7e}{\index{e\-Hutils.\-h@{e\-Hutils.\-h}!parse\-C\-S\-Vstr2double@{parse\-C\-S\-Vstr2double}}
+\index{parse\-C\-S\-Vstr2double@{parse\-C\-S\-Vstr2double}!eHutils.h@{e\-Hutils.\-h}}
+\subsubsection[{parse\-C\-S\-Vstr2double}]{\setlength{\rightskip}{0pt plus 5cm}double$\ast$ parse\-C\-S\-Vstr2double (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{csvstr, }
+\item[{int $\ast$}]{siz}
+\end{DoxyParamCaption}
+)}}\label{eHutils_8h_a8811f888efac678236851b6c17f94b7e}
+
+
+Parse given string(e.\-g. \char`\"{}1.\-2, 3.\-4\textbackslash{}0\char`\"{}) to double precision array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csvstr} & null-\/terminated c string \\
+\hline
+{\em siz} & amount of numbers inside the string; if -\/1 is passed, actural size will be calculated and stored in siz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of numbers, memory is allocated for it 
+\end{DoxyReturn}
+\hypertarget{eHutils_8h_a162956c329a3598a84c94910478f8594}{\index{e\-Hutils.\-h@{e\-Hutils.\-h}!parse\-C\-S\-Vstr2int@{parse\-C\-S\-Vstr2int}}
+\index{parse\-C\-S\-Vstr2int@{parse\-C\-S\-Vstr2int}!eHutils.h@{e\-Hutils.\-h}}
+\subsubsection[{parse\-C\-S\-Vstr2int}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ parse\-C\-S\-Vstr2int (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{csvstr, }
+\item[{int $\ast$}]{siz, }
+\item[{int}]{offset = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{eHutils_8h_a162956c329a3598a84c94910478f8594}
+
+
+Parse given string(e.\-g. \char`\"{}10, 5\textbackslash{}0\char`\"{}) to integer array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em csvstr} & null-\/terminated c string \\
+\hline
+{\em siz} & number of integers inside the string; if -\/1 is passed, actural size will be calculated and stored in siz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of integers, memory is allocated for it 
+\end{DoxyReturn}

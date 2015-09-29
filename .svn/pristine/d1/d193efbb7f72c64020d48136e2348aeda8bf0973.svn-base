@@ -1,0 +1,99 @@
+/*!
+\mainpage
+
+<div class="textblock"><p>This project provides a C++ implementation for human face detection with Alignment from unconstrained photos. Below is a brief manual, detailed documentation is generated using doxygen. <br/>
+ <b>Tip</b> All the data structurs and functions are arranged in C style, you can use the <em>Files</em> tab to have an overview. <br/><br/> Implemented by <a href="http://cs.umass.edu/~hsu">Hang Su</a>.</p>
+<div class="image">
+<img src="images/Mainpage_faces.png" alt="Mainpage_faces.png"/>
+</div>
+<h1>Installation</h1>
+<h3>Checkout latest code</h3>
+<div class="bash" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #c20cb9; font-weight: bold;">svn</span> checkout http:<span style="color: #000000; font-weight: bold;">//</span>eharmony-photofeature.googlecode.com<span style="color: #000000; font-weight: bold;">/</span>svn<span style="color: #000000; font-weight: bold;">/</span>trunk<span style="color: #000000; font-weight: bold;">/</span> eharmony-photofeature-read-only</div> <h3>Dependencies</h3>
+<p>The code depends on <a href="http://opencv.willowgarage.com/">OpenCV</a> to load/dispaly image. To install OpenCV on Ubuntu/Debian: </p>
+ <div class="bash" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">apt-get</span> <span style="color: #c20cb9; font-weight: bold;">install</span> libopencv-dev</div>
+<p>A cblas library should also be installed, e.g. <br/>
+ Ubuntu/Debian </p>
+
+<div class="bash" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">apt-get</span> <span style="color: #c20cb9; font-weight: bold;">install</span> libblas-dev</div><p> Fedora </p>
+<div class="bash" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #c20cb9; font-weight: bold;">sudo</span> yum <span style="color: #c20cb9; font-weight: bold;">install</span> atlas-sse3-devel.x86_64</div>
+
+<h3>Compilation</h3>
+<div class="bash" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #c20cb9; font-weight: bold;">make</span> all</div>
+
+<h1>Usage example</h1>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><ol>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #339900;">#include "eHimage.h"</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #339900;">#include "eHfacemodel.h"</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #339900;">#include "eHposemodel.h"</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #339900;">#include "eHbbox.h"</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #339900;">#include &lt;vector&gt;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp;</div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #0000ff;">int</span> main<span style="color: #008000;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span><span style="color: #000040;">**</span> argv<span style="color: #008000;">)</span><span style="color: #008000;">{</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; <span style="color: #666666;">//load face model &amp; body model</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; facemodel_t<span style="color: #000040;">*</span> facemodel <span style="color: #000080;">=</span> facemodel_readFromFile<span style="color: #008000;">(</span><span style="color: #FF0000;">"face_p146.xml"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; posemodel_t<span style="color: #000040;">*</span> posemodel <span style="color: #000080;">=</span> posemodel_readFromFile<span style="color: #008000;">(</span><span style="color: #FF0000;">"pose_BUFFY.xml"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp;</div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; <span style="color: #666666;">//load a jpeg image</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; image_t<span style="color: #000040;">*</span> img <span style="color: #000080;">=</span> image_readJPG<span style="color: #008000;">(</span>argv<span style="color: #008000;">[</span><span style="color: #0000dd;">1</span><span style="color: #008000;">]</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; </div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; <span style="color: #666666;">//detect faces and show results</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; std<span style="color: #008080;">::</span><span style="color: #007788;">vector</span><span style="color: #000080;">&lt;</span>bbox_t<span style="color: #000080;">&gt;</span> faces <span style="color: #000080;">=</span> facemodel_detect<span style="color: #008000;">(</span>facemodel,posemodel,img<span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; image_showDetection<span style="color: #008000;">(</span>img, faces, <span style="color: #FF0000;">"Face Detection Results"</span><span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; </div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; <span style="color: #666666;">//destruct image and models</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; image_delete<span style="color: #008000;">(</span>img<span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; facemodel_delete<span style="color: #008000;">(</span>facemodel<span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; posemodel_delete<span style="color: #008000;">(</span>posemodel<span style="color: #008000;">)</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp;</div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;">&nbsp; &nbsp; <span style="color: #0000ff;">return</span> <span style="color: #0000dd;">0</span><span style="color: #008080;">;</span></div> </li>
+<li style="font-weight: normal; vertical-align:top;font: normal normal 130% &apos;Courier New&apos;, Courier, monospace; color: #003030;">
+<div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;color: #000020;"><span style="color: #008000;">}</span></div> </li>
+</ol>
+</div><h3>Image data structure and operation</h3>
+<p>A structure type <em>image_t</em> is defined to present images. Some usesful operations are also provided, e.g. to load a jpeg image from file, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">image_ptr image_readJPG <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> <span style="color: #000040;">*</span>filename<span style="color: #008000;">)</span></div><p> To delete an image, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> image_delete <span style="color: #008000;">(</span>image_ptr img<span style="color: #008000;">)</span></div><h3>Face detection</h3>
+<p>Face detection is based on algorithm described in [1]. Pre-trained models are provided in XML format. <br/>
+ To load a face model, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">facemodel_t <span style="color: #000040;">*</span> &nbsp; facemodel_readFromFile <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> <span style="color: #000040;">*</span>filepath<span style="color: #008000;">)</span></div><p> To detect faces, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">vector<span style="color: #000080;">&lt;</span> bbox_t <span style="color: #000080;">&gt;</span> &nbsp; &nbsp;facemodel_detect <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> facemodel_t <span style="color: #000040;">*</span>model, <span style="color: #0000ff;">const</span> image_ptr img<span style="color: #008000;">)</span></div><p> A body detection model (described below) can also be combined to help improve detection performace </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">vector<span style="color: #000080;">&lt;</span> bbox_t <span style="color: #000080;">&gt;</span> &nbsp; &nbsp;facemodel_detect <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> facemodel_t <span style="color: #000040;">*</span>facemodel, <span style="color: #0000ff;">const</span> posemodel_t <span style="color: #000040;">*</span>posemodel, <span style="color: #0000ff;">const</span> image_ptr img<span style="color: #008000;">)</span></div><p> Results can be visualized using </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> &nbsp; &nbsp;image_showDetection <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> image_ptr img, <span style="color: #0000ff;">const</span> vector<span style="color: #000080;">&lt;</span> bbox_t <span style="color: #000080;">&gt;</span> boxes, <span style="color: #0000ff;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">string</span> <span style="color: #000040;">&amp;</span>winname<span style="color: #008000;">)</span></div><p> or </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> &nbsp; &nbsp;image_showFaces <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> image_ptr img, <span style="color: #0000ff;">const</span> vector<span style="color: #000080;">&lt;</span> bbox_t <span style="color: #000080;">&gt;</span> boxes, <span style="color: #0000ff;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">string</span> <span style="color: #000040;">&amp;</span>winname<span style="color: #008000;">)</span></div><p> Finally, a face model can be deleted using <br/>
+ </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> &nbsp; &nbsp;facemodel_delete <span style="color: #008000;">(</span>facemodel_t <span style="color: #000040;">*</span>model<span style="color: #008000;">)</span></div><h3>Body/pose detection</h3>
+<p>Human body detection is based on algorithm described in [2]. Pre-trained models are provided in XML format. <br/>
+ To load a pose model, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">posemodel_t<span style="color: #000040;">*</span> posemodel_readFromFile<span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span><span style="color: #000040;">*</span> filepath<span style="color: #008000;">)</span></div><p> To detect poses, use </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;">vector<span style="color: #000080;">&lt;</span>bbox_t<span style="color: #000080;">&gt;</span> posemodel_detect<span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> posemodel_t<span style="color: #000040;">*</span> model, <span style="color: #0000ff;">const</span> image_ptr img<span style="color: #008000;">)</span></div><p> Results can be visualized using </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> &nbsp; &nbsp;image_showDetection <span style="color: #008000;">(</span><span style="color: #0000ff;">const</span> image_ptr img, <span style="color: #0000ff;">const</span> vector<span style="color: #000080;">&lt;</span> bbox_t <span style="color: #000080;">&gt;</span> boxes, <span style="color: #0000ff;">const</span> std<span style="color: #008080;">::</span><span style="color: #007788;">string</span> <span style="color: #000040;">&amp;</span>winname<span style="color: #008000;">)</span></div><p> Finally, the model can be deleted using </p>
+<div class="cpp" style="font-family:monospace;color: #006; border: 1px solid #d0d0d0; background-color: #f0f0f0;"><span style="color: #0000ff;">void</span> posemodel_delete<span style="color: #008000;">(</span>posemodel_t<span style="color: #000040;">*</span> model<span style="color: #008000;">)</span></div><h1>References</h1>
+<p>[1] X. Zhu, D. Ramanan. <b>"Face detection, pose estimation and landmark localization in the wild"</b> Computer Vision and Pattern Recognition (CVPR) Providence, Rhode Island, June 2012. <br/>
+ [2] Y. Yang, D. Ramanan. <b>"Articulated Pose Estimation using Flexible Mixtures of Parts"</b> Computer Vision and Pattern Recognition (CVPR) Colorado Springs, Colorado, June 2011. <br/>
+ </p>
+</div>
+*/

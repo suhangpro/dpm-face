@@ -1,0 +1,52 @@
+\hypertarget{eHimageFeature_8h}{\section{e\-Himage\-Feature.\-h File Reference}
+\label{eHimageFeature_8h}\index{e\-Himage\-Feature.\-h@{e\-Himage\-Feature.\-h}}
+}
+
+
+Compute image features.  
+
+
+{\ttfamily \#include \char`\"{}e\-Himage.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hmatrix.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHmatrix_8h_aa07790a7fe1ed877b1482166e499794b}{mat3d\-\_\-ptr} \hyperlink{eHimageFeature_8h_ac237bf580630bdfcc978b3cadfd2f75b}{e\-Hhog} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, int sbin)
+\begin{DoxyCompactList}\small\item\em Compute H\-O\-G feature of a color image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Compute image features. \begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHimageFeature_8h_ac237bf580630bdfcc978b3cadfd2f75b}{\index{e\-Himage\-Feature.\-h@{e\-Himage\-Feature.\-h}!e\-Hhog@{e\-Hhog}}
+\index{e\-Hhog@{e\-Hhog}!eHimageFeature.h@{e\-Himage\-Feature.\-h}}
+\subsubsection[{e\-Hhog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf mat3d\-\_\-ptr} e\-Hhog (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{int}]{sbin}
+\end{DoxyParamCaption}
+)}}\label{eHimageFeature_8h_ac237bf580630bdfcc978b3cadfd2f75b}
+
+
+Compute H\-O\-G feature of a color image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & 3 channel double precision image \\
+\hline
+{\em sbin} & bin size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+H\-O\-G feature matrix 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+feature matrix is allocated inside, proper delete is necessary after use 
+\end{DoxyNote}

@@ -1,0 +1,397 @@
+\hypertarget{eHimage_8h}{\section{e\-Himage.\-h File Reference}
+\label{eHimage_8h}\index{e\-Himage.\-h@{e\-Himage.\-h}}
+}
+
+
+Basic image type and operations.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}e\-Hbox.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Hbbox.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHimage}{e\-Himage}
+\begin{DoxyCompactList}\small\item\em Basic image data structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHimage_8h_a6f19c025a891f54181de2a73fe16f42a}{typedef struct \hyperlink{structeHimage}{e\-Himage} \hyperlink{eHimage_8h_a6f19c025a891f54181de2a73fe16f42a}{image\-\_\-t}}\label{eHimage_8h_a6f19c025a891f54181de2a73fe16f42a}
+
+\begin{DoxyCompactList}\small\item\em Basic image data structure. \end{DoxyCompactList}\item 
+\hypertarget{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{typedef \hyperlink{eHimage_8h_a6f19c025a891f54181de2a73fe16f42a}{image\-\_\-t} $\ast$ \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr}}\label{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}
+
+\begin{DoxyCompactList}\small\item\em Pointer to image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_a261c244cf36d1f5c42065d0e9f5f5ed6}{image\-\_\-alloc} (size\-\_\-t sizy, size\-\_\-t sizx, size\-\_\-t nch=3)
+\begin{DoxyCompactList}\small\item\em Allocate a new image of size \mbox{[}sizy, sizx, nch\mbox{]}. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_a4da24162cd580ef2763026b3e981974f}{image\-\_\-alloc} (size\-\_\-t sizy, size\-\_\-t sizx, size\-\_\-t nch, const double $\ast$fillval)
+\begin{DoxyCompactList}\small\item\em Allocate a new image of size \mbox{[}sizy, sizx, nch\mbox{]}, and initialize all pixel values to fill. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a7e87d5e4ab358be0d5bf2ee648d9ee2c}{image\-\_\-delete} (\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img)
+\begin{DoxyCompactList}\small\item\em Delete image and associated memory. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a9d97a70868e2ba2958b23143e64f9201}{image\-\_\-fill} (\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const double $\ast$val)
+\begin{DoxyCompactList}\small\item\em Fill all pixels with same values. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_a9b760506fbf5548dd4e3715b5083e863}{image\-\_\-read\-J\-P\-G} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Read Jpeg image file. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a014be865a1868dec62c6a796ef71810e}{image\-\_\-write\-J\-P\-G} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Write Jpeg image file. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a77cd33d6390bf822b058eb7f25e43d6c}{image\-\_\-display} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const std\-::string \&winname)
+\begin{DoxyCompactList}\small\item\em Display an image. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_af0063d4ff4f21fd884270787bb469ecf}{image\-\_\-subsample} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, double scale)
+\begin{DoxyCompactList}\small\item\em Fast image subsampling. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_ad385369b8994122799afb2d270e13f54}{image\-\_\-reduce} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img)
+\begin{DoxyCompactList}\small\item\em Get an image half the size of input one. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_ae90c0aef6060a854178bd302a950cd87}{image\-\_\-resize} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, double scale)
+\begin{DoxyCompactList}\small\item\em Resize an image using bilateral interpolation. \end{DoxyCompactList}\item 
+\hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} \hyperlink{eHimage_8h_afaa0749505500e27056ecd3e9dd1ae1d}{image\-\_\-crop} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, \hyperlink{eHbox_8h_a5a56d87a649d81945e96505ec76d6c54}{fbox\-\_\-t} crop, int $\ast$offset=N\-U\-L\-L, bool shared=true)
+\begin{DoxyCompactList}\small\item\em Crop image This function can be used in two ways, either get shared data from original image, or allocate a new image, which is more expensive. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a8b0520a24e737cc7208edbe533951b5c}{image\-\_\-write\-Detection\-Jpg} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ boxes, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Write Jpg image with detected faces. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a833d312fe8e414bbe2c79a02de548d68}{image\-\_\-write\-Detection\-Xml} (const vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ boxes, const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Save detected faces in X\-M\-L format. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a0f26b43f04d0c7b86902114f0b6b3c6c}{image\-\_\-show\-Detection} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ boxes, const std\-::string \&winname)
+\begin{DoxyCompactList}\small\item\em Show detection results on image and wait. \end{DoxyCompactList}\item 
+void \hyperlink{eHimage_8h_a92eebfec853379102723c265a4d18970}{image\-\_\-show\-Faces} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} img, const vector$<$ \hyperlink{eHbbox_8h_abf0e2add76a0dd37cdac1cabc51c4812}{bbox\-\_\-t} $>$ boxes, const std\-::string \&winname)
+\begin{DoxyCompactList}\small\item\em Show face detection results\-: face region, eyes, nose, mouth. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic image type and operations. \begin{DoxyNote}{Note}
+images are stored using column major style
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/13 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHimage_8h_a261c244cf36d1f5c42065d0e9f5f5ed6}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-alloc@{image\-\_\-alloc}}
+\index{image\-\_\-alloc@{image\-\_\-alloc}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{sizy, }
+\item[{size\-\_\-t}]{sizx, }
+\item[{size\-\_\-t}]{nch = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a261c244cf36d1f5c42065d0e9f5f5ed6}
+
+
+Allocate a new image of size \mbox{[}sizy, sizx, nch\mbox{]}. 
+
+\begin{DoxyReturn}{Returns}
+pointer to the allocated image 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Returned image is not initialized 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_a4da24162cd580ef2763026b3e981974f}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-alloc@{image\-\_\-alloc}}
+\index{image\-\_\-alloc@{image\-\_\-alloc}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{size\-\_\-t}]{sizy, }
+\item[{size\-\_\-t}]{sizx, }
+\item[{size\-\_\-t}]{nch, }
+\item[{const double $\ast$}]{fillval}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a4da24162cd580ef2763026b3e981974f}
+
+
+Allocate a new image of size \mbox{[}sizy, sizx, nch\mbox{]}, and initialize all pixel values to fill. 
+
+\begin{DoxyReturn}{Returns}
+pointer to the allocated image 
+\end{DoxyReturn}
+\hypertarget{eHimage_8h_afaa0749505500e27056ecd3e9dd1ae1d}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-crop@{image\-\_\-crop}}
+\index{image\-\_\-crop@{image\-\_\-crop}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-crop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-crop (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{{\bf fbox\-\_\-t}}]{crop, }
+\item[{int $\ast$}]{offset = {\ttfamily NULL}, }
+\item[{bool}]{shared = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_afaa0749505500e27056ecd3e9dd1ae1d}
+
+
+Crop image This function can be used in two ways, either get shared data from original image, or allocate a new image, which is more expensive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & original image \\
+\hline
+{\em crop} & crop area within img \\
+\hline
+{\em store} & offset \mbox{[}offy offx\mbox{]} of the cropped patch inside image if not N\-U\-L\-L \\
+\hline
+{\em shared} & indicate whether the result shares data with original image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cropped image patch, N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{eHimage_8h_a7e87d5e4ab358be0d5bf2ee648d9ee2c}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-delete@{image\-\_\-delete}}
+\index{image\-\_\-delete@{image\-\_\-delete}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf image\-\_\-ptr}}]{img}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a7e87d5e4ab358be0d5bf2ee648d9ee2c}
+
+
+Delete image and associated memory. 
+
+\begin{DoxyNote}{Note}
+If it's a shared image(the \char`\"{}child\char`\"{}), no data is destroyed; if the image that owns the data is deleted, all descendants are not accessible anymore 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_a77cd33d6390bf822b058eb7f25e43d6c}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-display@{image\-\_\-display}}
+\index{image\-\_\-display@{image\-\_\-display}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-display}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-display (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{const std\-::string \&}]{winname}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a77cd33d6390bf822b058eb7f25e43d6c}
+
+
+Display an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & the image to be displayed \\
+\hline
+{\em winname} & window name, also serves as the identifier of the window \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Requires opencv library\-: libopencv\-\_\-core, libopencv\-\_\-highgui 
+
+If a window with the same name already exists, no new window is created 
+
+windows need to be destroyed later, using cv\-::destroy\-Window() 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_a9d97a70868e2ba2958b23143e64f9201}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-fill@{image\-\_\-fill}}
+\index{image\-\_\-fill@{image\-\_\-fill}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-fill}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-fill (
+\begin{DoxyParamCaption}
+\item[{{\bf image\-\_\-ptr}}]{img, }
+\item[{const double $\ast$}]{val}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a9d97a70868e2ba2958b23143e64f9201}
+
+
+Fill all pixels with same values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & target \\
+\hline
+{\em val} & value to be filled to each pixel, it should be at least the same length as img-\/$>$nchannel \\
+\hline
+\end{DoxyParams}
+\hypertarget{eHimage_8h_a9b760506fbf5548dd4e3715b5083e863}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-read\-J\-P\-G@{image\-\_\-read\-J\-P\-G}}
+\index{image\-\_\-read\-J\-P\-G@{image\-\_\-read\-J\-P\-G}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-read\-J\-P\-G}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-read\-J\-P\-G (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a9b760506fbf5548dd4e3715b5083e863}
+
+
+Read Jpeg image file. 
+
+\begin{DoxyReturn}{Returns}
+pointer to allocatd image, N\-U\-L\-L if failed 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Requires opencv library\-: libopencv\-\_\-core, libopencv\-\_\-highgui 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_ad385369b8994122799afb2d270e13f54}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-reduce@{image\-\_\-reduce}}
+\index{image\-\_\-reduce@{image\-\_\-reduce}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-reduce}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-reduce (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_ad385369b8994122799afb2d270e13f54}
+
+
+Get an image half the size of input one. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & the image to be reduced \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reduced image 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+input image remains alive and unchanged 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_ae90c0aef6060a854178bd302a950cd87}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-resize@{image\-\_\-resize}}
+\index{image\-\_\-resize@{image\-\_\-resize}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-resize}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-resize (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_ae90c0aef6060a854178bd302a950cd87}
+
+
+Resize an image using bilateral interpolation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & the image to be resized \\
+\hline
+{\em scale} & resizing scale \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resized image 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_af0063d4ff4f21fd884270787bb469ecf}{image\-\_\-subsample()} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+input image remains alive and unchanged 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_a0f26b43f04d0c7b86902114f0b6b3c6c}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-show\-Detection@{image\-\_\-show\-Detection}}
+\index{image\-\_\-show\-Detection@{image\-\_\-show\-Detection}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-show\-Detection}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-show\-Detection (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{const vector$<$ {\bf bbox\-\_\-t} $>$}]{boxes, }
+\item[{const std\-::string \&}]{winname}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a0f26b43f04d0c7b86902114f0b6b3c6c}
+
+
+Show detection results on image and wait. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & detection target \\
+\hline
+{\em boxes} & detection results \\
+\hline
+{\em winname} & display window name, also serves as an identifier \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_a92eebfec853379102723c265a4d18970}{image\-\_\-show\-Faces()} 
+\end{DoxySeeAlso}
+\hypertarget{eHimage_8h_a92eebfec853379102723c265a4d18970}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-show\-Faces@{image\-\_\-show\-Faces}}
+\index{image\-\_\-show\-Faces@{image\-\_\-show\-Faces}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-show\-Faces}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-show\-Faces (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{const vector$<$ {\bf bbox\-\_\-t} $>$}]{boxes, }
+\item[{const std\-::string \&}]{winname}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a92eebfec853379102723c265a4d18970}
+
+
+Show face detection results\-: face region, eyes, nose, mouth. 
+
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_a0f26b43f04d0c7b86902114f0b6b3c6c}{image\-\_\-show\-Detection()} 
+\end{DoxySeeAlso}
+\hypertarget{eHimage_8h_af0063d4ff4f21fd884270787bb469ecf}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-subsample@{image\-\_\-subsample}}
+\index{image\-\_\-subsample@{image\-\_\-subsample}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-subsample}]{\setlength{\rightskip}{0pt plus 5cm}{\bf image\-\_\-ptr} image\-\_\-subsample (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_af0063d4ff4f21fd884270787bb469ecf}
+
+
+Fast image subsampling. 
+
+Unlike \hyperlink{eHimage_8h_ae90c0aef6060a854178bd302a950cd87}{image\-\_\-resize()}, this function can only be used to down-\/scale an image, and focus more on anti-\/aliasing when building pyramid 
+\begin{DoxyParams}{Parameters}
+{\em img} & the image to be subsampled \\
+\hline
+{\em scale} & subsample scale ($<$1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+subsampleded image, or N\-U\-L\-L if scale$>$1 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_ae90c0aef6060a854178bd302a950cd87}{image\-\_\-resize()} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+input image remains alive and unchanged
+
+src image is not destroyed 
+\end{DoxyNote}
+\hypertarget{eHimage_8h_a8b0520a24e737cc7208edbe533951b5c}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-write\-Detection\-Jpg@{image\-\_\-write\-Detection\-Jpg}}
+\index{image\-\_\-write\-Detection\-Jpg@{image\-\_\-write\-Detection\-Jpg}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-write\-Detection\-Jpg}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-write\-Detection\-Jpg (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{const vector$<$ {\bf bbox\-\_\-t} $>$}]{boxes, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a8b0520a24e737cc7208edbe533951b5c}
+
+
+Write Jpg image with detected faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & detection target \\
+\hline
+{\em boxes} & detection results \\
+\hline
+{\em filename} & saving path \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_a833d312fe8e414bbe2c79a02de548d68}{image\-\_\-write\-Detection\-Xml()} 
+\end{DoxySeeAlso}
+\hypertarget{eHimage_8h_a833d312fe8e414bbe2c79a02de548d68}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-write\-Detection\-Xml@{image\-\_\-write\-Detection\-Xml}}
+\index{image\-\_\-write\-Detection\-Xml@{image\-\_\-write\-Detection\-Xml}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-write\-Detection\-Xml}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-write\-Detection\-Xml (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf bbox\-\_\-t} $>$}]{boxes, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a833d312fe8e414bbe2c79a02de548d68}
+
+
+Save detected faces in X\-M\-L format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boxes} & detection results \\
+\hline
+{\em filename} & saving path \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{eHimage_8h_a8b0520a24e737cc7208edbe533951b5c}{image\-\_\-write\-Detection\-Jpg()} 
+\end{DoxySeeAlso}
+\hypertarget{eHimage_8h_a014be865a1868dec62c6a796ef71810e}{\index{e\-Himage.\-h@{e\-Himage.\-h}!image\-\_\-write\-J\-P\-G@{image\-\_\-write\-J\-P\-G}}
+\index{image\-\_\-write\-J\-P\-G@{image\-\_\-write\-J\-P\-G}!eHimage.h@{e\-Himage.\-h}}
+\subsubsection[{image\-\_\-write\-J\-P\-G}]{\setlength{\rightskip}{0pt plus 5cm}void image\-\_\-write\-J\-P\-G (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{img, }
+\item[{const char $\ast$}]{filename}
+\end{DoxyParamCaption}
+)}}\label{eHimage_8h_a014be865a1868dec62c6a796ef71810e}
+
+
+Write Jpeg image file. 
+
+\begin{DoxyNote}{Note}
+Requires opencv library\-: libopencv\-\_\-core, libopencv\-\_\-highgui 
+\end{DoxyNote}

@@ -1,0 +1,37 @@
+\hypertarget{structeHbox__f}{\section{e\-Hbox\-\_\-f Struct Reference}
+\label{structeHbox__f}\index{e\-Hbox\-\_\-f@{e\-Hbox\-\_\-f}}
+}
+
+
+box with floating-\/point boundaries  
+
+
+
+
+{\ttfamily \#include $<$e\-Hbox.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHbox__f_af3126f4d69a822e5ca0c7f5ebaf19a7c}{double \hyperlink{structeHbox__f_af3126f4d69a822e5ca0c7f5ebaf19a7c}{x1}}\label{structeHbox__f_af3126f4d69a822e5ca0c7f5ebaf19a7c}
+
+\begin{DoxyCompactList}\small\item\em left bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__f_a939eb86ee05d47cd50ae8f84cdb86415}{double \hyperlink{structeHbox__f_a939eb86ee05d47cd50ae8f84cdb86415}{y1}}\label{structeHbox__f_a939eb86ee05d47cd50ae8f84cdb86415}
+
+\begin{DoxyCompactList}\small\item\em up bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__f_ae0f6a80294db01175bd4cd4ec4bcc4d6}{double \hyperlink{structeHbox__f_ae0f6a80294db01175bd4cd4ec4bcc4d6}{x2}}\label{structeHbox__f_ae0f6a80294db01175bd4cd4ec4bcc4d6}
+
+\begin{DoxyCompactList}\small\item\em right bound \end{DoxyCompactList}\item 
+\hypertarget{structeHbox__f_a4a25cd8e2734fb6843f78861c25e5d69}{double \hyperlink{structeHbox__f_a4a25cd8e2734fb6843f78861c25e5d69}{y2}}\label{structeHbox__f_a4a25cd8e2734fb6843f78861c25e5d69}
+
+\begin{DoxyCompactList}\small\item\em bottom bound \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+box with floating-\/point boundaries 
+
+Boxes are defined as tuples (x1, y1, x2, y2), where x1$<$=x2, y1$<$=y2; so (x1,y1) is the top-\/left corner, (x2,y2) is the bottom-\/right corner. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHbox_8h}{e\-Hbox.\-h}\end{DoxyCompactItemize}

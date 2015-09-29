@@ -1,0 +1,61 @@
+\hypertarget{eHfeatpyramid_8h}{\section{e\-Hfeatpyramid.\-h File Reference}
+\label{eHfeatpyramid_8h}\index{e\-Hfeatpyramid.\-h@{e\-Hfeatpyramid.\-h}}
+}
+
+
+Feature pyramid data type and calculation.  
+
+
+{\ttfamily \#include \char`\"{}e\-Hmatrix.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}e\-Himage.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structeHfeatpyramid}{e\-Hfeatpyramid}
+\begin{DoxyCompactList}\small\item\em Image feature pyramid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{eHfeatpyramid_8h_a0aaa33b53d0eae706597619ca859c600}{typedef struct \hyperlink{structeHfeatpyramid}{e\-Hfeatpyramid} \hyperlink{eHfeatpyramid_8h_a0aaa33b53d0eae706597619ca859c600}{featpyra\-\_\-t}}\label{eHfeatpyramid_8h_a0aaa33b53d0eae706597619ca859c600}
+
+\begin{DoxyCompactList}\small\item\em Pointer to a feature pyramid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHfeatpyramid_8h_a0aaa33b53d0eae706597619ca859c600}{featpyra\-\_\-t} $\ast$ \hyperlink{eHfeatpyramid_8h_a89cb3ca0c48cb2723b37eb67cf1943a3}{featpyra\-\_\-create} (const \hyperlink{eHimage_8h_ae304fd15a69606760d7025f41427e3d8}{image\-\_\-ptr} im, int interval, int sbin, const int $\ast$maxsize, bool hallucinate=true)
+\begin{DoxyCompactList}\small\item\em Allocate and compute a feature pyramid from an image. \end{DoxyCompactList}\item 
+\hypertarget{eHfeatpyramid_8h_aea871989ec5e11acf1b2685d65c57cd8}{void \hyperlink{eHfeatpyramid_8h_aea871989ec5e11acf1b2685d65c57cd8}{featpyra\-\_\-delete} (\hyperlink{eHfeatpyramid_8h_a0aaa33b53d0eae706597619ca859c600}{featpyra\-\_\-t} $\ast$pyra)}\label{eHfeatpyramid_8h_aea871989ec5e11acf1b2685d65c57cd8}
+
+\begin{DoxyCompactList}\small\item\em Delete a feature pyramid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Feature pyramid data type and calculation. \begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/08-\/14 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHfeatpyramid_8h_a89cb3ca0c48cb2723b37eb67cf1943a3}{\index{e\-Hfeatpyramid.\-h@{e\-Hfeatpyramid.\-h}!featpyra\-\_\-create@{featpyra\-\_\-create}}
+\index{featpyra\-\_\-create@{featpyra\-\_\-create}!eHfeatpyramid.h@{e\-Hfeatpyramid.\-h}}
+\subsubsection[{featpyra\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf featpyra\-\_\-t}$\ast$ featpyra\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const {\bf image\-\_\-ptr}}]{im, }
+\item[{int}]{interval, }
+\item[{int}]{sbin, }
+\item[{const int $\ast$}]{maxsize, }
+\item[{bool}]{hallucinate = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}}\label{eHfeatpyramid_8h_a89cb3ca0c48cb2723b37eb67cf1943a3}
+
+
+Allocate and compute a feature pyramid from an image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hallucinate} & whether hallucinate a higher resolution interval \\
+\hline
+\end{DoxyParams}

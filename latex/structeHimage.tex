@@ -1,0 +1,57 @@
+\hypertarget{structeHimage}{\section{e\-Himage Struct Reference}
+\label{structeHimage}\index{e\-Himage@{e\-Himage}}
+}
+
+
+Basic image data structure.  
+
+
+
+
+{\ttfamily \#include $<$e\-Himage.\-h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structeHimage_af3cd8581b5bbff79b7344bfe4fac6c5a}{double $\ast$ \hyperlink{structeHimage_af3cd8581b5bbff79b7344bfe4fac6c5a}{data}}\label{structeHimage_af3cd8581b5bbff79b7344bfe4fac6c5a}
+
+\begin{DoxyCompactList}\small\item\em pixel value data \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a9483a5238c06a352128db41c7a4038b7}{double $\ast$ \hyperlink{structeHimage_a9483a5238c06a352128db41c7a4038b7}{ch} \mbox{[}3\mbox{]}}\label{structeHimage_a9483a5238c06a352128db41c7a4038b7}
+
+\begin{DoxyCompactList}\small\item\em a view into each channel \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a0a2c38985ae94bedd3252e225f423abd}{size\-\_\-t \hyperlink{structeHimage_a0a2c38985ae94bedd3252e225f423abd}{sizy}}\label{structeHimage_a0a2c38985ae94bedd3252e225f423abd}
+
+\begin{DoxyCompactList}\small\item\em image height \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a32762d41a4a29f7f4ec2deeaf89581b7}{size\-\_\-t \hyperlink{structeHimage_a32762d41a4a29f7f4ec2deeaf89581b7}{sizx}}\label{structeHimage_a32762d41a4a29f7f4ec2deeaf89581b7}
+
+\begin{DoxyCompactList}\small\item\em image width \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a78c894ca2a89fca4e1b927e5ecfa27a4}{size\-\_\-t \hyperlink{structeHimage_a78c894ca2a89fca4e1b927e5ecfa27a4}{nchannel}}\label{structeHimage_a78c894ca2a89fca4e1b927e5ecfa27a4}
+
+\begin{DoxyCompactList}\small\item\em number of channels \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a6a36ac9a6a707ca8494875ba6cc5e5f3}{int \hyperlink{structeHimage_a6a36ac9a6a707ca8494875ba6cc5e5f3}{imsize} \mbox{[}3\mbox{]}}\label{structeHimage_a6a36ac9a6a707ca8494875ba6cc5e5f3}
+
+\begin{DoxyCompactList}\small\item\em \mbox{[}sizy sizx nchanel\mbox{]} \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a02015e3f88dac09b02854a45500f4a5a}{bool \hyperlink{structeHimage_a02015e3f88dac09b02854a45500f4a5a}{is\-\_\-shared}}\label{structeHimage_a02015e3f88dac09b02854a45500f4a5a}
+
+\begin{DoxyCompactList}\small\item\em whether share data with a parent image \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a651a46d0e791768ecfd72ba8c6fbc3af}{size\-\_\-t \hyperlink{structeHimage_a651a46d0e791768ecfd72ba8c6fbc3af}{stepy}}\label{structeHimage_a651a46d0e791768ecfd72ba8c6fbc3af}
+
+\begin{DoxyCompactList}\small\item\em step between columns \end{DoxyCompactList}\item 
+\hypertarget{structeHimage_a490e5f631a108b3cbf1dfb3c86495c2d}{size\-\_\-t \hyperlink{structeHimage_a490e5f631a108b3cbf1dfb3c86495c2d}{stepyx}}\label{structeHimage_a490e5f631a108b3cbf1dfb3c86495c2d}
+
+\begin{DoxyCompactList}\small\item\em step between channels \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic image data structure. 
+
+\begin{DoxyNote}{Note}
+Using column major (Fortran) style 
+
+Data is associated with (double$\ast$ data), (double$\ast$ ch\mbox{[}3\mbox{]}) only provide a view into data 
+\end{DoxyNote}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{eHimage_8h}{e\-Himage.\-h}\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+\hypertarget{eHshiftdt_8h}{\section{e\-Hshiftdt.\-h File Reference}
+\label{eHshiftdt_8h}\index{e\-Hshiftdt.\-h@{e\-Hshiftdt.\-h}}
+}
+
+
+Generalized Distance Transform.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{eHshiftdt_8h_ab281a320e6b6d58982e9894ea4d060f4}{e\-Hshiftdt} (double $\ast$M, int $\ast$Ix, int $\ast$Iy, int lenx, int leny, int offx, int offy, int dstep, const double $\ast$vals, int sizx, int sizy, const double $\ast$w)
+\begin{DoxyCompactList}\small\item\em Perform generalized distance transform. \end{DoxyCompactList}\item 
+\hypertarget{eHshiftdt_8h_a77c99107307b6466e5f6dd974ba9ae37}{void {\bfseries e\-Hshiftdt} (double $\ast$M, int $\ast$Ix, int $\ast$Iy, const double $\ast$vals, int sizx, int sizy, const double $\ast$w)}\label{eHshiftdt_8h_a77c99107307b6466e5f6dd974ba9ae37}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generalized Distance Transform. \begin{DoxySeeAlso}{See Also}
+P. F. Felzenszwalb and D. P. Huttenlocher, \char`\"{}\-Distance Transforms of Sampled Functions\char`\"{}. 2004. 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Hang Su 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2012-\/07 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\hypertarget{eHshiftdt_8h_ab281a320e6b6d58982e9894ea4d060f4}{\index{e\-Hshiftdt.\-h@{e\-Hshiftdt.\-h}!e\-Hshiftdt@{e\-Hshiftdt}}
+\index{e\-Hshiftdt@{e\-Hshiftdt}!eHshiftdt.h@{e\-Hshiftdt.\-h}}
+\subsubsection[{e\-Hshiftdt}]{\setlength{\rightskip}{0pt plus 5cm}void e\-Hshiftdt (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{M, }
+\item[{int $\ast$}]{Ix, }
+\item[{int $\ast$}]{Iy, }
+\item[{int}]{lenx, }
+\item[{int}]{leny, }
+\item[{int}]{offx, }
+\item[{int}]{offy, }
+\item[{int}]{dstep, }
+\item[{const double $\ast$}]{vals, }
+\item[{int}]{sizx, }
+\item[{int}]{sizy, }
+\item[{const double $\ast$}]{w}
+\end{DoxyParamCaption}
+)}}\label{eHshiftdt_8h_ab281a320e6b6d58982e9894ea4d060f4}
+
+
+Perform generalized distance transform. 
+
+This applies computes a min convolution of a quadratic function ax$^\wedge$2+bx This outputs results on a shifted(offy, offx), subsampled(dstep) grid \begin{DoxyNote}{Note}
+M, Ix, Iy should be properly allocated before passed in, they are then modified as output results 
+\end{DoxyNote}
